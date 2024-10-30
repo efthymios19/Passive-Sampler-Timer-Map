@@ -86,4 +86,17 @@ for index, row in filtered_ps.iterrows():
         popup=folium.Popup(popup_content, max_width=300),
     ).add_to(m)
 
+# Add a legend
+legend_html = """
+<div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 150px; height: 90px; 
+     background-color: white; z-index:9999; font-size:14px;
+     border:2px solid grey; border-radius:8px; padding: 10px;">
+     <strong>Legend</strong><br>
+     <i class="fa fa-circle" style="color:green"></i> Installed<br>
+     <i class="fa fa-circle" style="color:red"></i> Ready to Collect
+</div>
+"""
+
+m.get_root().html.add_child(folium.Element(legend_html))
 m.save('index.html')
