@@ -4,7 +4,7 @@ from datetime import timedelta
 
 ### Import kobo-csv
 
-ps=pd.read_csv('data.csv', sep=';')
+ps=pd.read_csv('data/data.csv', sep=';')
 
 # Convert 'Date_Time' to datetime and sort by date for each sampling point
 filtered_ps=ps
@@ -27,10 +27,24 @@ def calculate_days_remaining(row):
     elif row['Passive Sampler Type'] == 'VPS':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'CPS' or row['Passive Sampler Type'] == 'DGTs' or row['Passive Sampler Type'] == 'CPS and DGTs':
+    elif row['Passive Sampler Type'] == 'CPS and DGTs':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'VPS and DGTs' or row['Passive Sampler Type'] == 'VPS and CPS':
+    elif row['Passive Sampler Type'] == 'CPS':
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive Sampler Type'] == 'DGTs':
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive Sampler Type'] == 'CPS and DGTs':
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive Sampler Type'] == 'VPS and DGTs':
+        termination_date_VPS = row['Date_Time'] + timedelta(days=12)
+        days_remaining_VPS = max((termination_date_VPS - today).days, 0)
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive Sampler Type'] == 'VPS and CPS':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
