@@ -1,5 +1,5 @@
 # Passive-Sampler-Timer-Map
-This repository hosts a dynamic, interactive map that displays and updates Passive samplets installation data using a Python script and an automated workflow via GitHub Actions. The map shows countdowns for each sampling point, with markers that adapt based on sampling type and date, removing points marked as collected and starting or restarting timers for installations.
+This repository hosts a dynamic, interactive map that displays and updates passive samplers installation data using a Python script and an automated workflow via GitHub Actions. The map shows countdowns for each sampling point, with markers that adapt based on sampling type and date, removing points marked as collected and starting or restarting timers for installations.
 
 Methodology
 1. Data Preparation and Python Script
@@ -15,9 +15,9 @@ Methodology
 
 An automation workflow in the .github/workflows/update_map.yml file allows the map to update at regular intervals. Key steps include:
 
-    Triggering the Workflow: The .yml file sets up a cron job to run the script every 6 hours, checking for updated data.
-    Running the Python Script: Each run executes the map generation script in the repository, outputting an updated index.html file.
-    Committing Changes: If changes to the map are detected, GitHub Actions commits and pushes the updated HTML to the main branch.
+- Triggering the Workflow: The .yml file sets up a cron job to run the script every 6 hours, checking for updated data.
+- Running the Python Script: Each run executes the map generation script in the repository, outputting an updated index.html file.
+- Committing Changes: If changes to the map are detected, GitHub Actions commits and pushes the updated HTML to the main branch.
     
 ## Python Package Versions
 
@@ -28,4 +28,5 @@ The project uses the following versions for key Python packages:
 
 For a complete list, refer to the [requirements.txt](requirements.txt) file.
 
+## Dynamic Interactive Passive Samplers Map
 Link: https://efthymios19.github.io/Passive-Sampler-Timer-Map/
