@@ -36,5 +36,7 @@ jobs:
           git add index.html  # Replace with the generated file name
           git commit -m "Auto-update map"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Avoid errors if there are no changes
         continue-on-error: true
