@@ -1,0 +1,40 @@
+name: Update Interactive Map
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Specify the required Python version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas folium datetime  # Assuming this is in the root directory
+
+      - name: Run map update script
+        run: |
+          python scripts/update_map_script.py  # Run the script from scripts/ folder
+        env:
+          DATA_FILE_PATH: data/data.csv  # Provide the path to the CSV in the data/ folder
+
+      - name: Commit and push changes
+        run: |
+          git config --global 'efthimios19'
+          git config --global  'echrysanthopoulos@metal.ntua.gr'
+          git add index.html  # Replace with the generated file name
+          git commit -m "Auto-update map"
+          git push
+        # Avoid errors if there are no changes
+        continue-on-error: true
