@@ -25,7 +25,7 @@ jobs:
 
       - name: Run map update script
         run: |
-          python scripts/update_map_script.py  # Run the script from scripts/ folder
+          python script/update_map_script.py  # Run the script from scripts/ folder
         env:
           DATA_FILE_PATH: data/data.csv  # Provide the path to the CSV in the data/ folder
 
