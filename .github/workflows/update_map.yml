@@ -31,8 +31,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global 'efthimios19'
-          git config --global  'echrysanthopoulos@metal.ntua.gr'
+          git config --global user.name "efthymios19"
+          git config --global user.email "echrysanthopoulos@metal.ntua.gr"
           git add index.html  # Replace with the generated file name
           git commit -m "Auto-update map"
           git push
