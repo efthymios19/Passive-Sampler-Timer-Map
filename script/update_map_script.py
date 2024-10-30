@@ -95,4 +95,4 @@ for index, row in filtered_ps.iterrows():
         id=f"marker{index}"
     ).add_to(m)
 
-m.save('map_timer.html')
+m.save('index.html')
