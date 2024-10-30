@@ -13,11 +13,10 @@ Methodology
 
 2. Automating Map Updates with GitHub Actions
 
-An automation workflow in the .github/workflows/update_map.yml file allows the map to update at regular intervals. Key steps include:
-
-- Triggering the Workflow: The .yml file sets up a cron job to run the script every 6 hours, checking for updated data.
-- Running the Python Script: Each run executes the map generation script in the repository, outputting an updated index.html file.
-- Committing Changes: If changes to the map are detected, GitHub Actions commits and pushes the updated HTML to the main branch.
+   An automation workflow in the .github/workflows/update_map.yml file allows the map to update at regular intervals. Key steps include:
+   - Triggering the Workflow: The .yml file sets up a cron job to run the script every 6 hours, checking for updated data.
+   - Running the Python Script: Each run executes the map generation script in the repository, outputting an updated index.html file.
+   - Committing Changes: If changes to the map are detected, GitHub Actions commits and pushes the updated HTML to the main branch.
     
 ## Python Package Versions
 
