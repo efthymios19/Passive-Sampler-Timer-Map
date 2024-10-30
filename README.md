@@ -1,4 +1,4 @@
-# Passive-Sampler-Timer-Map
+# Passive Sampler Timer Map
 This repository hosts a dynamic, interactive map that displays and updates passive samplers installation data using a Python script and an automated workflow via GitHub Actions. The map shows countdowns for each sampling point, with markers that adapt based on sampling type and date, removing points marked as collected and starting or restarting timers for installations.
 
 Methodology
