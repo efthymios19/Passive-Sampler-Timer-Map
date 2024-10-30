@@ -12,12 +12,12 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_1b0b34ee9aa79bd68ec31602c0373c0e {
+                #map_be3892b831ecab22904d207b23058975 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,43 +39,14 @@
 <body>
     
     
-<script>
-    const data = JSON.parse('[{"ID":"ATH35","Partner Abbreviation":"NTUA","Water Resource":"Well","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":25.5,"Installation\/Collection":"Installation","Date_Time":"2024-10-22T12:31:00.000","Location":"38.1048179 23.7672666 266.0 4.2","_Location_latitude":38.1048179,"_Location_longitude":23.7672666,"_Location_altitude":266.0,"_Location_precision":4.2,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":"Steel","Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":18.4,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1729600366021.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2Fb5b4f0d8-27a5-47fd-99f7-764577cfd14c%2F1729600366021.jpg","Comments":"\u039f\u03bb\u03c5\u03bc\u03c0\u03b9\u03b1\u03ba\u03bf \u03c7\u03c9\u03c1\u03b9\u03bf","_uuid":"b5b4f0d8-27a5-47fd-99f7-764577cfd14c","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":7.0,"termination_date_CPS":"2024-11-06T12:31:00.000"},{"ID":"ATH30","Partner Abbreviation":"NTUA","Water Resource":"Dug Well","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"3D Printed Custom","3D printed case material":"PLA","Passive samplers installation depth (m.)":8.5,"Installation\/Collection":"Installation","Date_Time":"2024-10-22T13:30:00.000","Location":"38.0616486 23.7759227 255.90000915527344 4.14","_Location_latitude":38.0616486,"_Location_longitude":23.7759227,"_Location_altitude":255.9000091553,"_Location_precision":4.14,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":5.4,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":1607.0,"pH":6.98,"DO (mg\/l)":4.2,"Water Temperature (oC)":20.6,"Picture":"1729603923790.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2Fb654c9d6-d149-4d0f-929d-c48282b0bdc4%2F1729603923790.jpg","Comments":"IR","_uuid":"b654c9d6-d149-4d0f-929d-c48282b0bdc4","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":7.0,"termination_date_CPS":"2024-11-06T13:30:00.000"},{"ID":"ATH7","Partner Abbreviation":"NTUA","Water Resource":"Dug Well","Passive Sampler Type":"All of them","VPS: Number of nitrocelluloce filters":3,"VPS: Number of nylon filters":2,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"3D Printed Custom","3D printed case material":"PLA","Passive samplers installation depth (m.)":16.7,"Installation\/Collection":"Installation","Date_Time":"2024-10-23T11:08:00.000","Location":"37.9928092 23.7065597 73.5 2.02","_Location_latitude":37.9928092,"_Location_longitude":23.7065597,"_Location_altitude":73.5,"_Location_precision":2.02,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":12.7,"Distance of piezometer from ground (m.)":1.25,"EC (\u03bcS\/cm)":1079.0,"pH":7.17,"DO (mg\/l)":4.86,"Water Temperature (oC)":21.0,"Picture":"1729681814211.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2Ff4d35ca4-e53f-436b-bf11-b1069ba48b2a%2F1729681814211.jpg","Comments":"Academia platwnos","_uuid":"f4d35ca4-e53f-436b-bf11-b1069ba48b2a","days_remaining_VPS":5.0,"termination_date_VPS":"2024-11-04T11:08:00.000","days_remaining_CPS":8.0,"termination_date_CPS":"2024-11-07T11:08:00.000"},{"ID":"Answering (Ren)","Partner Abbreviation":"NTUA","Water Resource":"Dug Well","Passive Sampler Type":"All of them","VPS: Number of nitrocelluloce filters":3,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"3D Printed Custom","3D printed case material":"PLA","Passive samplers installation depth (m.)":14.0,"Installation\/Collection":"Installation","Date_Time":"2024-10-23T12:04:00.000","Location":"37.9732939 23.681795 59.099998474121094 4.866","_Location_latitude":37.9732939,"_Location_longitude":23.681795,"_Location_altitude":59.0999984741,"_Location_precision":4.866,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":10.7,"Distance of piezometer from ground (m.)":1.6,"EC (\u03bcS\/cm)":1392.0,"pH":7.11,"DO (mg\/l)":2.53,"Water Temperature (oC)":20.7,"Picture":"1729685109708.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2Fc128beba-f36d-4986-8f90-b88ea9076584%2F1729685109708.jpg","Comments":null,"_uuid":"c128beba-f36d-4986-8f90-b88ea9076584","days_remaining_VPS":5.0,"termination_date_VPS":"2024-11-04T12:04:00.000","days_remaining_CPS":8.0,"termination_date_CPS":"2024-11-07T12:04:00.000"},{"ID":"ATH14","Partner Abbreviation":"NTUA","Water Resource":"Well","Passive Sampler Type":"All of them","VPS: Number of nitrocelluloce filters":3,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"3D Printed Custom","3D printed case material":"PLA","Passive samplers installation depth (m.)":15.7,"Installation\/Collection":"Installation","Date_Time":"2024-10-23T13:23:00.000","Location":"37.955489 23.7038454 61.5 4.725","_Location_latitude":37.955489,"_Location_longitude":23.7038454,"_Location_altitude":61.5,"_Location_precision":4.725,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":45.0,"Well casing material":"Steel","Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":9.5,"Distance of piezometer from ground (m.)":0.45,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1729689941488.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2F53e30f12-acbb-45ad-bb80-e5a9e0b8e99a%2F1729689941488.jpg","Comments":"Kallithe","_uuid":"53e30f12-acbb-45ad-bb80-e5a9e0b8e99a","days_remaining_VPS":5.0,"termination_date_VPS":"2024-11-04T13:23:00.000","days_remaining_CPS":8.0,"termination_date_CPS":"2024-11-07T13:23:00.000"},{"ID":"RIZ","Partner Abbreviation":"NTUA","Water Resource":"Well","Passive Sampler Type":"All of them","VPS: Number of nitrocelluloce filters":3,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"3D Printed Custom","3D printed case material":"PLA","Passive samplers installation depth (m.)":14.5,"Installation\/Collection":"Installation","Date_Time":"2024-10-23T16:08:00.000","Location":"37.9750715 23.7471533 138.40000915527344 4.622","_Location_latitude":37.9750715,"_Location_longitude":23.7471533,"_Location_altitude":138.4000091553,"_Location_precision":4.622,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":"Steel","Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":11.0,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1729699768992.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2F9add8a42-5632-428e-893e-e7b7f6a643e4%2F1729699768992.jpg","Comments":null,"_uuid":"9add8a42-5632-428e-893e-e7b7f6a643e4","days_remaining_VPS":5.0,"termination_date_VPS":"2024-11-04T16:08:00.000","days_remaining_CPS":8.0,"termination_date_CPS":"2024-11-07T16:08:00.000"},{"ID":"ATH36","Partner Abbreviation":"NTUA","Water Resource":"Dug Well","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":13.5,"Installation\/Collection":"Installation","Date_Time":"2024-10-24T08:19:00.000","Location":"38.0118522 23.8024963 229.00001525878906 3.774","_Location_latitude":38.0118522,"_Location_longitude":23.8024963,"_Location_altitude":229.0000152588,"_Location_precision":3.774,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":15.0,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":12.6,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":1362.0,"pH":7.56,"DO (mg\/l)":7.26,"Water Temperature (oC)":20.7,"Picture":null,"Picture_URL":null,"Comments":"Xalandri","_uuid":"9027c738-1784-441b-978a-a716b76dbea2","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":8.0,"termination_date_CPS":"2024-11-08T08:19:00.000"},{"ID":"ATH22","Partner Abbreviation":"NTUA","Water Resource":"Well","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":13.5,"Installation\/Collection":"Installation","Date_Time":"2024-10-24T09:50:00.000","Location":"38.041222 23.7036323 142.70001220703125 4.86","_Location_latitude":38.041222,"_Location_longitude":23.7036323,"_Location_altitude":142.700012207,"_Location_precision":4.86,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":4.0,"Well casing material":"Steel","Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":10.15,"Distance of piezometer from ground (m.)":0.38,"EC (\u03bcS\/cm)":1100.0,"pH":7.15,"DO (mg\/l)":5.19,"Water Temperature (oC)":21.8,"Picture":null,"Picture_URL":null,"Comments":"The well is underneath the ground surface","_uuid":"7ef365fe-0ab1-4217-b43b-96a9ed9bbc42","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":8.0,"termination_date_CPS":"2024-11-08T09:50:00.000"},{"ID":"Dekeleias","Partner Abbreviation":"NTUA","Water Resource":"River","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis and 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":null,"Installation\/Collection":"Installation","Date_Time":"2024-10-25T08:58:00.000","Location":"38.0920204 23.7706263 244.40000915527344 3.76","_Location_latitude":38.0920204,"_Location_longitude":23.7706263,"_Location_altitude":244.4000091553,"_Location_precision":3.76,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":null,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1729846759483.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2F2795b542-b8fb-49a1-b1ad-63a840926bb1%2F1729846759483.jpg","Comments":null,"_uuid":"2795b542-b8fb-49a1-b1ad-63a840926bb1","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":9.0,"termination_date_CPS":"2024-11-09T08:58:00.000"},{"ID":"Agfan","Partner Abbreviation":"NTUA","Water Resource":"River","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis and 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":null,"Installation\/Collection":"Installation","Date_Time":"2024-10-25T09:48:00.000","Location":"38.074408 23.7581039 185.8000030517578 4.25","_Location_latitude":38.074408,"_Location_longitude":23.7581039,"_Location_altitude":185.8000030518,"_Location_precision":4.25,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":null,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1729849764797.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2F8482eccf-90f5-4b73-8a46-a24260cdb74a%2F1729849764797.jpg","Comments":null,"_uuid":"8482eccf-90f5-4b73-8a46-a24260cdb74a","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":9.0,"termination_date_CPS":"2024-11-09T09:48:00.000"},{"ID":"KM","Partner Abbreviation":"NTUA","Water Resource":"River","Passive Sampler Type":"CPS and DGTs","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis and 100 mg porapak","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":null,"Installation\/Collection":"Installation","Date_Time":"2024-10-25T10:18:00.000","Location":"38.0495859 23.7373848 145.20001220703125 4.5","_Location_latitude":38.0495859,"_Location_longitude":23.7373848,"_Location_altitude":145.200012207,"_Location_precision":4.5,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":null,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1729851602771.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2Fb8f8f949-a4fb-4c13-b18d-357879dd7118%2F1729851602771.jpg","Comments":null,"_uuid":"b8f8f949-a4fb-4c13-b18d-357879dd7118","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":10.0,"termination_date_CPS":"2024-11-09T10:18:00.000"},{"ID":"Ath1","Partner Abbreviation":"NTUA","Water Resource":"Well","Passive Sampler Type":"VPS DGTs CPS","VPS: Number of nitrocelluloce filters":3,"VPS: Number of nylon filters":3,"CPS: Number of installed CPS":2,"CPS: sorbent":"Porapack","DGTs: Number of installed DGTs":2,"Passive sampler Case Type":"Custom","3D printed case material":"PLA","Passive samplers installation depth (m.)":15.0,"Installation\/Collection":"Installation","Date_Time":"2024-10-28T08:45:00.000","Location":"37.9295254 23.7476211 145.10000610351562 4.88","_Location_latitude":37.9295254,"_Location_longitude":23.7476211,"_Location_altitude":145.1000061035,"_Location_precision":4.88,"Elevation (m.)":25.0,"Air Temperature (oC)":20.0,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":"Plastic (PVC, etc.)","Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":null,"Distance of piezometer from ground (m.)":null,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":null,"Picture_URL":null,"Comments":"Well ","_uuid":"a243c449-9318-43a4-96c8-dabf06667ac0","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":null,"termination_date_CPS":null},{"ID":"Aigalew ","Partner Abbreviation":"NTUA","Water Resource":"Dug Well","Passive Sampler Type":"CPS","VPS: Number of nitrocelluloce filters":0,"VPS: Number of nylon filters":0,"CPS: Number of installed CPS":2,"CPS: sorbent":"300 mg oasis 100 mg porapak","DGTs: Number of installed DGTs":0,"Passive sampler Case Type":"Custom","3D printed case material":null,"Passive samplers installation depth (m.)":10.0,"Installation\/Collection":"Installation","Date_Time":"2024-10-29T09:34:00.000","Location":"37.984222 23.6664544 72.0 4.651","_Location_latitude":37.984222,"_Location_longitude":23.6664544,"_Location_altitude":72.0,"_Location_precision":4.651,"Elevation (m.)":null,"Air Temperature (oC)":null,"Air Humidity (%)":null,"Well diameter (cm.)":null,"Well casing material":null,"Well Depth (m.)":null,"Top(m.)":null,"Bottom(m.)":null,"Groundwater level (m.)":7.35,"Distance of piezometer from ground (m.)":0.81,"EC (\u03bcS\/cm)":null,"pH":null,"DO (mg\/l)":null,"Water Temperature (oC)":null,"Picture":"1730194537028.jpg","Picture_URL":"https:\/\/kc-eu.kobotoolbox.org\/media\/original?media_file=upwater%2Fattachments%2Fdbccd49887044cbb9dd2e9b522914445%2F40e2a0bb-dc05-4bcc-ad93-babd4e9af72b%2F1730194537028.jpg","Comments":null,"_uuid":"40e2a0bb-dc05-4bcc-ad93-babd4e9af72b","days_remaining_VPS":null,"termination_date_VPS":null,"days_remaining_CPS":13.0,"termination_date_CPS":"2024-11-13T09:34:00.000"}]');
-
-    function updateCountdown() {
-        const today = new Date();
-
-        data.forEach((row, index) => {
-            const vpsEnd = row.termination_date_VPS ? new Date(row.termination_date_VPS) : null;
-            const cpsEnd = row.termination_date_CPS ? new Date(row.termination_date_CPS) : null;
-            const vpsDaysRemaining = vpsEnd ? Math.max(0, Math.ceil((vpsEnd - today) / (1000 * 60 * 60 * 24))) : null;
-            const cpsDaysRemaining = cpsEnd ? Math.max(0, Math.ceil((cpsEnd - today) / (1000 * 60 * 60 * 24))) : null;
-
-            const timerVPS = document.getElementById("timer_vps" + index);
-            const timerCPS = document.getElementById("timer_cps" + index);
-            const marker = document.querySelector(`[id="marker${index}"] circle`);
-
-            if (timerVPS && vpsDaysRemaining !== null) timerVPS.innerText = vpsDaysRemaining;
-            if (timerCPS && cpsDaysRemaining !== null) timerCPS.innerText = cpsDaysRemaining;
-
-            const newColor = (vpsDaysRemaining === 0 || cpsDaysRemaining === 0) ? "red" : "green";
-            marker.setAttribute("fill", newColor);
-            marker.setAttribute("stroke", newColor);
-        });
-    }
-
-    setInterval(updateCountdown, 60000);
-    updateCountdown();
-</script>
-    
-            <div class="folium-map" id="map_1b0b34ee9aa79bd68ec31602c0373c0e" ></div>
+            <div class="folium-map" id="map_be3892b831ecab22904d207b23058975" ></div>
         
 </body>
 <script>
     
     
-            var map_1b0b34ee9aa79bd68ec31602c0373c0e = L.map(
-                "map_1b0b34ee9aa79bd68ec31602c0373c0e",
+            var map_be3892b831ecab22904d207b23058975 = L.map(
+                "map_be3892b831ecab22904d207b23058975",
                 {
                     center: [38.018920461538464, 23.736066292307694],
                     crs: L.CRS.EPSG3857,
@@ -89,280 +60,283 @@
 
         
     
-            var tile_layer_5d41c3ea14a1df065d9f2d877163c35f = L.tileLayer(
-                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            var tile_layer_31a16398f323661b15146b553999a332 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
         
     
-            var circle_marker_15f1f1d1062a156068ef79bc0faf9b6d = L.circleMarker(
+            tile_layer_31a16398f323661b15146b553999a332.addTo(map_be3892b831ecab22904d207b23058975);
+        
+    
+            var circle_marker_24fdeff859bce80d7621f037f0d4e32a = L.circleMarker(
                 [38.1048179, 23.7672666],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_df6d91c44f5042c75071a3b3e36c0e4e = L.popup({"maxWidth": 300});
+        var popup_6c52f1e095e00375e6618252cc159cfd = L.popup({"maxWidth": 300});
 
         
             
-                var html_1ab78263b3b9ce354cf7e06f0f64a214 = $(`<div id="html_1ab78263b3b9ce354cf7e06f0f64a214" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH35<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-22 12:31:00<br><b>CPS Days Remaining:</b> <span id='timer_cps3'>7.0</span> days<br><b>CPS End Date:</b> 2024-11-06<br></div>`)[0];
-                popup_df6d91c44f5042c75071a3b3e36c0e4e.setContent(html_1ab78263b3b9ce354cf7e06f0f64a214);
+                var html_a55f8ad320e66745f00aeb5ebf0a2baf = $(`<div id="html_a55f8ad320e66745f00aeb5ebf0a2baf" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH35<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-22 12:31:00<br><b>CPS Days Remaining:</b> <span id='timer_cps3'>7.0</span> days<br><b>CPS End Date:</b> 2024-11-06<br></div>`)[0];
+                popup_6c52f1e095e00375e6618252cc159cfd.setContent(html_a55f8ad320e66745f00aeb5ebf0a2baf);
             
         
 
-        circle_marker_15f1f1d1062a156068ef79bc0faf9b6d.bindPopup(popup_df6d91c44f5042c75071a3b3e36c0e4e)
+        circle_marker_24fdeff859bce80d7621f037f0d4e32a.bindPopup(popup_6c52f1e095e00375e6618252cc159cfd)
         ;
 
         
     
     
-            var circle_marker_5e56e3c0f14d593207089155b2e7be52 = L.circleMarker(
+            var circle_marker_9fd4c6aaf1717eae25b22b6b8de473e3 = L.circleMarker(
                 [38.0616486, 23.7759227],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_5c3ceccb652f412c8a4f9becf72cc53e = L.popup({"maxWidth": 300});
+        var popup_4606ad709756160643f71a426d40eb8e = L.popup({"maxWidth": 300});
 
         
             
-                var html_d05cd80a8ad86b008b5b1f116e85cff3 = $(`<div id="html_d05cd80a8ad86b008b5b1f116e85cff3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH30<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-22 13:30:00<br><b>CPS Days Remaining:</b> <span id='timer_cps4'>7.0</span> days<br><b>CPS End Date:</b> 2024-11-06<br></div>`)[0];
-                popup_5c3ceccb652f412c8a4f9becf72cc53e.setContent(html_d05cd80a8ad86b008b5b1f116e85cff3);
+                var html_45f00ac2315f4ee0e98edfc66ccdeb2d = $(`<div id="html_45f00ac2315f4ee0e98edfc66ccdeb2d" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH30<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-22 13:30:00<br><b>CPS Days Remaining:</b> <span id='timer_cps4'>7.0</span> days<br><b>CPS End Date:</b> 2024-11-06<br></div>`)[0];
+                popup_4606ad709756160643f71a426d40eb8e.setContent(html_45f00ac2315f4ee0e98edfc66ccdeb2d);
             
         
 
-        circle_marker_5e56e3c0f14d593207089155b2e7be52.bindPopup(popup_5c3ceccb652f412c8a4f9becf72cc53e)
+        circle_marker_9fd4c6aaf1717eae25b22b6b8de473e3.bindPopup(popup_4606ad709756160643f71a426d40eb8e)
         ;
 
         
     
     
-            var circle_marker_12f3da752da7144fff0096fb357de782 = L.circleMarker(
+            var circle_marker_06ba570de26b904c5bad6d3b10613c87 = L.circleMarker(
                 [37.9928092, 23.7065597],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_d2c7145e02841097295ffea7b3b9bf91 = L.popup({"maxWidth": 300});
+        var popup_c7f1096c220416497f695b48c302ae45 = L.popup({"maxWidth": 300});
 
         
             
-                var html_0b1e7e7959fcd2090c284baea854bca5 = $(`<div id="html_0b1e7e7959fcd2090c284baea854bca5" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH7<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 11:08:00<br><b>VPS Days Remaining:</b> <span id='timer_vps5'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
-                popup_d2c7145e02841097295ffea7b3b9bf91.setContent(html_0b1e7e7959fcd2090c284baea854bca5);
+                var html_42e7513914569a0e5d4b8dbdf6fe7dd6 = $(`<div id="html_42e7513914569a0e5d4b8dbdf6fe7dd6" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH7<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 11:08:00<br><b>VPS Days Remaining:</b> <span id='timer_vps5'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
+                popup_c7f1096c220416497f695b48c302ae45.setContent(html_42e7513914569a0e5d4b8dbdf6fe7dd6);
             
         
 
-        circle_marker_12f3da752da7144fff0096fb357de782.bindPopup(popup_d2c7145e02841097295ffea7b3b9bf91)
+        circle_marker_06ba570de26b904c5bad6d3b10613c87.bindPopup(popup_c7f1096c220416497f695b48c302ae45)
         ;
 
         
     
     
-            var circle_marker_ec57e4eafc5b4edea554ec4f6f0d356f = L.circleMarker(
+            var circle_marker_8689ab0fde60db2508f16c9d03e05b6d = L.circleMarker(
                 [37.9732939, 23.681795],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_86f021e8b3a827f94c3fcab48e74abf8 = L.popup({"maxWidth": 300});
+        var popup_7c4f517f9b5598433c3faa4dfa59f8ae = L.popup({"maxWidth": 300});
 
         
             
-                var html_cbd260760792facf69c854b267e131f4 = $(`<div id="html_cbd260760792facf69c854b267e131f4" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Answering (Ren)<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 12:04:00<br><b>VPS Days Remaining:</b> <span id='timer_vps6'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps6'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
-                popup_86f021e8b3a827f94c3fcab48e74abf8.setContent(html_cbd260760792facf69c854b267e131f4);
+                var html_c7b84132582fbf1cc911662f1e8fc766 = $(`<div id="html_c7b84132582fbf1cc911662f1e8fc766" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Answering (Ren)<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 12:04:00<br><b>VPS Days Remaining:</b> <span id='timer_vps6'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps6'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
+                popup_7c4f517f9b5598433c3faa4dfa59f8ae.setContent(html_c7b84132582fbf1cc911662f1e8fc766);
             
         
 
-        circle_marker_ec57e4eafc5b4edea554ec4f6f0d356f.bindPopup(popup_86f021e8b3a827f94c3fcab48e74abf8)
+        circle_marker_8689ab0fde60db2508f16c9d03e05b6d.bindPopup(popup_7c4f517f9b5598433c3faa4dfa59f8ae)
         ;
 
         
     
     
-            var circle_marker_e596ad7f6eb1cacecb651065abcc0ed3 = L.circleMarker(
+            var circle_marker_66fe777d415eb42be20648ab6af319e8 = L.circleMarker(
                 [37.955489, 23.7038454],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_6947c2e31bc103efc121c42024c594ce = L.popup({"maxWidth": 300});
+        var popup_03d3fb5a848ffb54a38fe71946229c78 = L.popup({"maxWidth": 300});
 
         
             
-                var html_4a0560f515cd6eed7502f90a88239406 = $(`<div id="html_4a0560f515cd6eed7502f90a88239406" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 13:23:00<br><b>VPS Days Remaining:</b> <span id='timer_vps7'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps7'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
-                popup_6947c2e31bc103efc121c42024c594ce.setContent(html_4a0560f515cd6eed7502f90a88239406);
+                var html_e02c7efe24caffe37295848e8fb82749 = $(`<div id="html_e02c7efe24caffe37295848e8fb82749" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 13:23:00<br><b>VPS Days Remaining:</b> <span id='timer_vps7'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps7'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
+                popup_03d3fb5a848ffb54a38fe71946229c78.setContent(html_e02c7efe24caffe37295848e8fb82749);
             
         
 
-        circle_marker_e596ad7f6eb1cacecb651065abcc0ed3.bindPopup(popup_6947c2e31bc103efc121c42024c594ce)
+        circle_marker_66fe777d415eb42be20648ab6af319e8.bindPopup(popup_03d3fb5a848ffb54a38fe71946229c78)
         ;
 
         
     
     
-            var circle_marker_14dc311a2eeecb0467675e4522415d4d = L.circleMarker(
+            var circle_marker_e223aec6bc45fa74d50e45530f02d3d4 = L.circleMarker(
                 [37.9750715, 23.7471533],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_04eb257b78823f6aee8ab0a4c2408c52 = L.popup({"maxWidth": 300});
+        var popup_377575aa7574fcc806b5686e2829bf7b = L.popup({"maxWidth": 300});
 
         
             
-                var html_a899c4a5519b732564caf925c5003f92 = $(`<div id="html_a899c4a5519b732564caf925c5003f92" style="width: 100.0%; height: 100.0%;"><b>ID:</b> RIZ<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 16:08:00<br><b>VPS Days Remaining:</b> <span id='timer_vps8'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps8'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
-                popup_04eb257b78823f6aee8ab0a4c2408c52.setContent(html_a899c4a5519b732564caf925c5003f92);
+                var html_1ba3e886fe95e67d8a9481ded2177062 = $(`<div id="html_1ba3e886fe95e67d8a9481ded2177062" style="width: 100.0%; height: 100.0%;"><b>ID:</b> RIZ<br><b>Type:</b> All of them<br><b>Installation Date:</b> 2024-10-23 16:08:00<br><b>VPS Days Remaining:</b> <span id='timer_vps8'>5.0</span> days<br><b>VPS End Date:</b> 2024-11-04<br><b>CPS Days Remaining:</b> <span id='timer_cps8'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-07<br></div>`)[0];
+                popup_377575aa7574fcc806b5686e2829bf7b.setContent(html_1ba3e886fe95e67d8a9481ded2177062);
             
         
 
-        circle_marker_14dc311a2eeecb0467675e4522415d4d.bindPopup(popup_04eb257b78823f6aee8ab0a4c2408c52)
+        circle_marker_e223aec6bc45fa74d50e45530f02d3d4.bindPopup(popup_377575aa7574fcc806b5686e2829bf7b)
         ;
 
         
     
     
-            var circle_marker_8681eb45ac678aeef52e133bd6ae72c5 = L.circleMarker(
+            var circle_marker_3de2823c4022c92accbbcc7b74dc10a0 = L.circleMarker(
                 [38.0118522, 23.8024963],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_2dd9be0246a2d43de8c00264f044d660 = L.popup({"maxWidth": 300});
+        var popup_81282958f21d999d67ea6ace549b711b = L.popup({"maxWidth": 300});
 
         
             
-                var html_eee3e54e1bf2291e77f181fa5755f10f = $(`<div id="html_eee3e54e1bf2291e77f181fa5755f10f" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-24 08:19:00<br><b>CPS Days Remaining:</b> <span id='timer_cps9'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-08<br></div>`)[0];
-                popup_2dd9be0246a2d43de8c00264f044d660.setContent(html_eee3e54e1bf2291e77f181fa5755f10f);
+                var html_e4fd1aa42f1785d2d24450fc3e31cd54 = $(`<div id="html_e4fd1aa42f1785d2d24450fc3e31cd54" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-24 08:19:00<br><b>CPS Days Remaining:</b> <span id='timer_cps9'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-08<br></div>`)[0];
+                popup_81282958f21d999d67ea6ace549b711b.setContent(html_e4fd1aa42f1785d2d24450fc3e31cd54);
             
         
 
-        circle_marker_8681eb45ac678aeef52e133bd6ae72c5.bindPopup(popup_2dd9be0246a2d43de8c00264f044d660)
+        circle_marker_3de2823c4022c92accbbcc7b74dc10a0.bindPopup(popup_81282958f21d999d67ea6ace549b711b)
         ;
 
         
     
     
-            var circle_marker_32b27f61f884b8ed7c9e805728c7baba = L.circleMarker(
+            var circle_marker_d832b51df4514de17bf1db71adf74cc9 = L.circleMarker(
                 [38.041222, 23.7036323],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_42f55a8857b3149e91132968b26cbe1b = L.popup({"maxWidth": 300});
+        var popup_232cac9e7fae435d4124a5c869c336e3 = L.popup({"maxWidth": 300});
 
         
             
-                var html_265ac884fb67c780aa14d446695fff58 = $(`<div id="html_265ac884fb67c780aa14d446695fff58" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH22<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-24 09:50:00<br><b>CPS Days Remaining:</b> <span id='timer_cps10'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-08<br></div>`)[0];
-                popup_42f55a8857b3149e91132968b26cbe1b.setContent(html_265ac884fb67c780aa14d446695fff58);
+                var html_546efc7ac732cfb8befeb5c97f6d626e = $(`<div id="html_546efc7ac732cfb8befeb5c97f6d626e" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH22<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-24 09:50:00<br><b>CPS Days Remaining:</b> <span id='timer_cps10'>8.0</span> days<br><b>CPS End Date:</b> 2024-11-08<br></div>`)[0];
+                popup_232cac9e7fae435d4124a5c869c336e3.setContent(html_546efc7ac732cfb8befeb5c97f6d626e);
             
         
 
-        circle_marker_32b27f61f884b8ed7c9e805728c7baba.bindPopup(popup_42f55a8857b3149e91132968b26cbe1b)
+        circle_marker_d832b51df4514de17bf1db71adf74cc9.bindPopup(popup_232cac9e7fae435d4124a5c869c336e3)
         ;
 
         
     
     
-            var circle_marker_e6628e6ef40e9e6bd1cf83a2cfac0dad = L.circleMarker(
+            var circle_marker_d74810488e6635e73725e46fc470342d = L.circleMarker(
                 [38.0920204, 23.7706263],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_b40a7d58f13ee393af11906b96d3c8c9 = L.popup({"maxWidth": 300});
+        var popup_5988e68769f436fe97ddf99955121e37 = L.popup({"maxWidth": 300});
 
         
             
-                var html_1f24371e4386c86601af0d9c7dd25951 = $(`<div id="html_1f24371e4386c86601af0d9c7dd25951" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-25 08:58:00<br><b>CPS Days Remaining:</b> <span id='timer_cps11'>9.0</span> days<br><b>CPS End Date:</b> 2024-11-09<br></div>`)[0];
-                popup_b40a7d58f13ee393af11906b96d3c8c9.setContent(html_1f24371e4386c86601af0d9c7dd25951);
+                var html_5ae6b6bdb7ad0f762285fa28c0c1307a = $(`<div id="html_5ae6b6bdb7ad0f762285fa28c0c1307a" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-25 08:58:00<br><b>CPS Days Remaining:</b> <span id='timer_cps11'>9.0</span> days<br><b>CPS End Date:</b> 2024-11-09<br></div>`)[0];
+                popup_5988e68769f436fe97ddf99955121e37.setContent(html_5ae6b6bdb7ad0f762285fa28c0c1307a);
             
         
 
-        circle_marker_e6628e6ef40e9e6bd1cf83a2cfac0dad.bindPopup(popup_b40a7d58f13ee393af11906b96d3c8c9)
+        circle_marker_d74810488e6635e73725e46fc470342d.bindPopup(popup_5988e68769f436fe97ddf99955121e37)
         ;
 
         
     
     
-            var circle_marker_878f248b8277d9dd41be4787dfcdd1dc = L.circleMarker(
+            var circle_marker_1b4da2cfd0067d97f3cc84520b68bc31 = L.circleMarker(
                 [38.074408, 23.7581039],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_28d3a0afc0326c3eff495355f19e7dd5 = L.popup({"maxWidth": 300});
+        var popup_93b5a872634989693926469b405a5a7b = L.popup({"maxWidth": 300});
 
         
             
-                var html_9eef5406b085beeb35f29d05f3c1a9ff = $(`<div id="html_9eef5406b085beeb35f29d05f3c1a9ff" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Agfan<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-25 09:48:00<br><b>CPS Days Remaining:</b> <span id='timer_cps12'>9.0</span> days<br><b>CPS End Date:</b> 2024-11-09<br></div>`)[0];
-                popup_28d3a0afc0326c3eff495355f19e7dd5.setContent(html_9eef5406b085beeb35f29d05f3c1a9ff);
+                var html_a94199101022a6643777ee15ca8a16cf = $(`<div id="html_a94199101022a6643777ee15ca8a16cf" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Agfan<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-25 09:48:00<br><b>CPS Days Remaining:</b> <span id='timer_cps12'>9.0</span> days<br><b>CPS End Date:</b> 2024-11-09<br></div>`)[0];
+                popup_93b5a872634989693926469b405a5a7b.setContent(html_a94199101022a6643777ee15ca8a16cf);
             
         
 
-        circle_marker_878f248b8277d9dd41be4787dfcdd1dc.bindPopup(popup_28d3a0afc0326c3eff495355f19e7dd5)
+        circle_marker_1b4da2cfd0067d97f3cc84520b68bc31.bindPopup(popup_93b5a872634989693926469b405a5a7b)
         ;
 
         
     
     
-            var circle_marker_70f46f1be685994fa7a8d3777be728ec = L.circleMarker(
+            var circle_marker_a5532278fc9aba214bcc192ceef2cd37 = L.circleMarker(
                 [38.0495859, 23.7373848],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_5decac36e3a43160a0e9002d2a876ce2 = L.popup({"maxWidth": 300});
+        var popup_cacc3de71cf08d5191bfb0a8815bc717 = L.popup({"maxWidth": 300});
 
         
             
-                var html_b259de14a7b2496983680ddd00ac9ce8 = $(`<div id="html_b259de14a7b2496983680ddd00ac9ce8" style="width: 100.0%; height: 100.0%;"><b>ID:</b> KM<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-25 10:18:00<br><b>CPS Days Remaining:</b> <span id='timer_cps13'>10.0</span> days<br><b>CPS End Date:</b> 2024-11-09<br></div>`)[0];
-                popup_5decac36e3a43160a0e9002d2a876ce2.setContent(html_b259de14a7b2496983680ddd00ac9ce8);
+                var html_15aa08947c2330981a32bdbeb711b1b7 = $(`<div id="html_15aa08947c2330981a32bdbeb711b1b7" style="width: 100.0%; height: 100.0%;"><b>ID:</b> KM<br><b>Type:</b> CPS and DGTs<br><b>Installation Date:</b> 2024-10-25 10:18:00<br><b>CPS Days Remaining:</b> <span id='timer_cps13'>10.0</span> days<br><b>CPS End Date:</b> 2024-11-09<br></div>`)[0];
+                popup_cacc3de71cf08d5191bfb0a8815bc717.setContent(html_15aa08947c2330981a32bdbeb711b1b7);
             
         
 
-        circle_marker_70f46f1be685994fa7a8d3777be728ec.bindPopup(popup_5decac36e3a43160a0e9002d2a876ce2)
+        circle_marker_a5532278fc9aba214bcc192ceef2cd37.bindPopup(popup_cacc3de71cf08d5191bfb0a8815bc717)
         ;
 
         
     
     
-            var circle_marker_cd1312e88165d5e849aa8516ef7b29d3 = L.circleMarker(
+            var circle_marker_19858912013d76f89e73778e844f76c9 = L.circleMarker(
                 [37.9295254, 23.7476211],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_21aa37ae8744cc0a445f0b996e590d71 = L.popup({"maxWidth": 300});
+        var popup_762b8537d760a6b51bae14aacbc0789d = L.popup({"maxWidth": 300});
 
         
             
-                var html_61029a7fda5847d76febe65db670ef04 = $(`<div id="html_61029a7fda5847d76febe65db670ef04" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Ath1<br><b>Type:</b> VPS DGTs CPS<br><b>Installation Date:</b> 2024-10-28 08:45:00<br></div>`)[0];
-                popup_21aa37ae8744cc0a445f0b996e590d71.setContent(html_61029a7fda5847d76febe65db670ef04);
+                var html_8c61504e046f603e25b6070536083a2d = $(`<div id="html_8c61504e046f603e25b6070536083a2d" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Ath1<br><b>Type:</b> VPS DGTs CPS<br><b>Installation Date:</b> 2024-10-28 08:45:00<br></div>`)[0];
+                popup_762b8537d760a6b51bae14aacbc0789d.setContent(html_8c61504e046f603e25b6070536083a2d);
             
         
 
-        circle_marker_cd1312e88165d5e849aa8516ef7b29d3.bindPopup(popup_21aa37ae8744cc0a445f0b996e590d71)
+        circle_marker_19858912013d76f89e73778e844f76c9.bindPopup(popup_762b8537d760a6b51bae14aacbc0789d)
         ;
 
         
     
     
-            var circle_marker_63e0ce750ff7ccc14c5159fade1193b2 = L.circleMarker(
+            var circle_marker_f76848e3f9fc6e92243d2ace6a372ae1 = L.circleMarker(
                 [37.984222, 23.6664544],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1b0b34ee9aa79bd68ec31602c0373c0e);
+            ).addTo(map_be3892b831ecab22904d207b23058975);
         
     
-        var popup_df05d3b879327fd77e0fd6e71bd51082 = L.popup({"maxWidth": 300});
+        var popup_c150dbb0ff71fa205ea1f71a6eeae8ef = L.popup({"maxWidth": 300});
 
         
             
-                var html_a68efe83cb733cfc6bec312a4e28a536 = $(`<div id="html_a68efe83cb733cfc6bec312a4e28a536" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Aigalew <br><b>Type:</b> CPS<br><b>Installation Date:</b> 2024-10-29 09:34:00<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>13.0</span> days<br><b>CPS End Date:</b> 2024-11-13<br></div>`)[0];
-                popup_df05d3b879327fd77e0fd6e71bd51082.setContent(html_a68efe83cb733cfc6bec312a4e28a536);
+                var html_eb7ac8f6c05027ccf750ed24a2a5f137 = $(`<div id="html_eb7ac8f6c05027ccf750ed24a2a5f137" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Aigalew <br><b>Type:</b> CPS<br><b>Installation Date:</b> 2024-10-29 09:34:00<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>13.0</span> days<br><b>CPS End Date:</b> 2024-11-13<br></div>`)[0];
+                popup_c150dbb0ff71fa205ea1f71a6eeae8ef.setContent(html_eb7ac8f6c05027ccf750ed24a2a5f137);
             
         
 
-        circle_marker_63e0ce750ff7ccc14c5159fade1193b2.bindPopup(popup_df05d3b879327fd77e0fd6e71bd51082)
+        circle_marker_f76848e3f9fc6e92243d2ace6a372ae1.bindPopup(popup_c150dbb0ff71fa205ea1f71a6eeae8ef)
         ;
 
         
