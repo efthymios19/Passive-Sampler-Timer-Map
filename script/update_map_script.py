@@ -4,7 +4,7 @@ from datetime import timedelta
 
 ### Import kobo-csv
 
-ps=pd.read_csv('data.csv', sep=';')
+ps=pd.read_csv('data/data.csv', sep=';')
 
 ### Filter dataframe based on the starting date of the campaing
 starting_date='2024-10-22'
