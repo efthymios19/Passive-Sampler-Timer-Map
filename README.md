@@ -5,13 +5,15 @@ Methodology
 1. Data Preparation and Python Script
 
     Data Input: A CSV file provides the dataset, containing each sampling point's ID, coordinates, installation, and collection details from kobotoolbox forms.
+   
     Date Calculations: The Python script calculates days remaining until the end of each sampling based on installation dates, using the datetime and pandas libraries for accurate time calculations.
+
     Map Creation: The folium library creates an HTML map:
         Sampling points are marked on the map with color-coded markers.
         Timers are displayed for each point, and points are removed if marked as "Collection"
         Countdown calculations adjust based on the type (e.g., CPS, VPS) and most recent installation or collection dates.
 
-2. Automating Map Updates with GitHub Actions
+3. Automating Map Updates with GitHub Actions
 
    An automation workflow in the .github/workflows/update_map.yml file allows the map to update at regular intervals. Key steps include:
    - Triggering the Workflow: The .yml file sets up a cron job to run the script every 6 hours, checking for updated data.
