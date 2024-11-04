@@ -75,7 +75,7 @@ for index, row in filtered_ps.iterrows():
         popup_content += f"<b>CPS Days Remaining:</b> <span id='timer_cps{index}'>{row['days_remaining_CPS']}</span> days<br><b>CPS End Date:</b> {termination_date_cps_str}<br>"
     
     # Marker color based on days remaining
-    initial_color = "green" if (row['days_remaining_VPS'] > 0 or row['days_remaining_CPS'] > 0) else "red"
+    initial_color = "red" if (row['days_remaining_VPS'] <= 0 or row['days_remaining_CPS'] <= 0) else "green"
     folium.CircleMarker(
         location=(row['_Location_latitude'], row['_Location_longitude']),
         radius=8,
