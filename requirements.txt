@@ -1,2 +1,3 @@
 folium==0.14.0
 pandas==2.1.4
+koboextractor=0.2.1
