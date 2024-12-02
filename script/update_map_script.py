@@ -109,9 +109,9 @@ filtered_api_df[['days_remaining_VPS', 'termination_date_VPS', 'days_remaining_C
 # Create the map
 m = folium.Map(location=[filtered_api_df['_Location_latitude'].mean(), filtered_api_df['_Location_longitude'].mean()], zoom_start=10)
 
-# Add markers based on the 'Installation', 'Collection', or 'Installation/Collection' status
+# Add markers based on the 'Installation', 'Collection', or 'Installation_Collection' status
 for index, row in filtered_api_df.iterrows():
-    if row['Installation/Collection'] == 'Collection':
+    if row['Installation_Collection'] == 'collection':
         # Skip this point; it won't appear on the map
         continue
     
