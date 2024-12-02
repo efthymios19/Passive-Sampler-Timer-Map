@@ -2,14 +2,65 @@ import pandas as pd
 import folium 
 from datetime import timedelta
 
-### Import kobo-csv
+### Import data from kobo-api
+token= "c5d9b5fb881c7f4799e126990107af5cbd45a8d1"
+form_id= 'a9WRp8ft8hBPCQesFGbZ5x'
+kobo_base_url= "https://kobo.humanitarianresponse.info/api/v2"
 
-ps=pd.read_csv('data/data.csv', sep=';')
+#Access account with API
+kobo=KoboExtractor(token,kobo_base_url)
+
+#Get information for all the forms
+asset=kobo.list_assets()
+
+#Get information for the passive samplers form
+pas=kobo.get_asset(form_id)
+
+#Get the data from the form
+data=kobo.get_data(form_id)
+
+api_df=pd.json_normalize(data['results'])
+
+api_df=api_df[["ID",
+    "Partner_Abbreviation",
+    "Water_Resource",
+    "Passive_Sampler_Type",
+    "VPS_Number_of_nitrocelluloce_filters",
+    "VPS_Number_of_nylon_filters",
+    "CPS_Number_of_installed_CPS",
+    "CPS_sorbent",
+    "DGTs_Number_of_installed_DGTs",
+    "Passive_sampler_Case_Type",
+    "_3D_printed_case_material",
+    "Passive_samplers_installation_depth_m",
+    "Installation_Collection",
+    "Date_Time",
+    "Location",
+    "Elevation_m",
+    "Air_Temperature_oC",
+    "Well_diameter_cm",
+    "Well_casing_material",
+    "Well_Depth_m",
+    "Groundwater_level_m",
+    "Distance_of_piezometer_from_ground_m",
+    "EC_S_cm",
+    "pH",
+    "DO_mg_l",
+    "Water_Temperature_oC",
+    "Picture",
+    "Comments"]]
+
+api_df[["_Location_latitude", "_Location_longitude", "Elevation", "Precision"]]=api_df['Location'].str.split(' ', expand=True)
+api_df['_Location_latitude']=api_df['_Location_latitude'].astype(float)
+api_df['_Location_longitude']=api_df['_Location_longitude'].astype(float)
+
+api_df.loc[api_df["ID"] == "Answering (Ren)", "ID"] = "REN"
+api_df.loc[api_df["ID"] == "Aigalew ", "ID"] = "Aigalew"
 
 # Convert 'Date_Time' to datetime and sort by date for each sampling point
-filtered_ps=ps
-filtered_ps['Date_Time'] = pd.to_datetime(filtered_ps['Date_Time'])
-filtered_ps = filtered_ps.sort_values(by=['ID', 'Date_Time']).groupby('ID').last().reset_index()
+filtered_api_df=api_df
+filtered_api_df['Date_Time'] = pd.to_datetime(filtered_api_df['Date_Time'])
+filtered_api_df = filtered_api_df.sort_values(by=['ID', 'Date_Time']).groupby('ID').last().reset_index()
 
 # Calculate days remaining for each row with the same function as before
 today = pd.Timestamp.now(tz='Europe/Athens')
@@ -19,32 +70,32 @@ def calculate_days_remaining(row):
     termination_date_CPS = None
     days_remaining_VPS = None
     days_remaining_CPS = None
-    if row['Passive Sampler Type'] == 'All of them':
+    if row['Passive_Sampler_Type'] == 'All of them':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'VPS':
+    elif row['Passive_Sampler_Type'] == 'VPS':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'CPS and DGTs':
+    elif row['Passive_Sampler_Type'] == 'CPS and DGTs':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'CPS':
+    elif row['Passive_Sampler_Type'] == 'CPS':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'DGTs':
+    elif row['Passive_Sampler_Type'] == 'DGTs':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'CPS and DGTs':
+    elif row['Passive_Sampler_Type'] == 'CPS and DGTs':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'VPS and DGTs':
+    elif row['Passive_Sampler_Type'] == 'VPS and DGTs':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive Sampler Type'] == 'VPS and CPS':
+    elif row['Passive_Sampler_Type'] == 'VPS and CPS':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
@@ -64,7 +115,7 @@ for index, row in filtered_ps.iterrows():
         continue
     
     # Popup content setup
-    popup_content = f"<b>ID:</b> {row['ID']}<br><b>Type:</b> {row['Passive Sampler Type']}<br><b>Installation Date:</b> {row['Date_Time']}<br>"
+    popup_content = f"<b>ID:</b> {row['ID']}<br><b>Type:</b> {row['Passive_Sampler_Type']}<br><b>Installation Date:</b> {row['Date_Time']}<br>"
     
     # Add VPS or CPS information if relevant
     if pd.notna(row['termination_date_VPS']):
