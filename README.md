@@ -4,7 +4,7 @@ This repository hosts a dynamic, interactive map that displays and updates passi
 Methodology
 1. Data Preparation and Python Script
 
-    Data Input: A CSV file provides the dataset, containing each sampling point's ID, coordinates, installation, and collection details from kobotoolbox forms.
+    Data Input: Data are automatically downloaded through Kobotoolbox API from the python script. 
    
     Date Calculations: The Python script calculates days remaining until the end of each sampling based on installation dates, using the datetime and pandas libraries for accurate time calculations.
 
