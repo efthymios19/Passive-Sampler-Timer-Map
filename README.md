@@ -26,6 +26,7 @@ The project uses the following versions for key Python packages:
 
 - `folium==0.14.0`
 - `pandas==2.1.4`
+- `koboextractor==0.2.1`
 
 For a complete list, refer to the [requirements.txt](requirements.txt) file.
 
