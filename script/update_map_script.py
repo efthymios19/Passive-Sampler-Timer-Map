@@ -1,6 +1,7 @@
 import pandas as pd
 import folium 
 from datetime import timedelta
+from koboextractor import KoboExtractor
 
 ### Import data from kobo-api
 token= "c5d9b5fb881c7f4799e126990107af5cbd45a8d1"
