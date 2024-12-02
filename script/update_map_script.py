@@ -71,32 +71,32 @@ def calculate_days_remaining(row):
     termination_date_CPS = None
     days_remaining_VPS = None
     days_remaining_CPS = None
-    if row['Passive_Sampler_Type'] == 'All of them':
+    if row['Passive_Sampler_Type'] == 'all_of_them':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'VPS':
+    elif row['Passive_Sampler_Type'] == 'vps':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'CPS and DGTs':
+    elif row['Passive_Sampler_Type'] == 'cps_and_dgts':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'CPS':
+    elif row['Passive_Sampler_Type'] == 'cps':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'DGTs':
+    elif row['Passive_Sampler_Type'] == 'dgts':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'CPS and DGTs':
+    elif row['Passive_Sampler_Type'] == 'cps_and_dgts':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'VPS and DGTs':
+    elif row['Passive_Sampler_Type'] == 'vps_and_dgts':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
-    elif row['Passive_Sampler_Type'] == 'VPS and CPS':
+    elif row['Passive_Sampler_Type'] == 'vps_and_cps':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
@@ -127,8 +127,7 @@ for index, row in filtered_api_df.iterrows():
         popup_content += f"<b>CPS Days Remaining:</b> <span id='timer_cps{index}'>{row['days_remaining_CPS']}</span> days<br><b>CPS End Date:</b> {termination_date_cps_str}<br>"
     
     # Marker color based on days remaining
-    initial_color = "red" if (pd.isna(row['days_remaining_VPS']) or pd.isna(row['days_remaining_CPS']) or 
-                          row['days_remaining_VPS'] <= 0 or row['days_remaining_CPS'] <= 0) else "green"
+    initial_color = "red" if (row['days_remaining_VPS'] <= 0 or row['days_remaining_CPS'] <= 0) else "green"
     folium.CircleMarker(
         location=(row['_Location_latitude'], row['_Location_longitude']),
         radius=8,
@@ -151,5 +150,6 @@ legend_html = """
 </div>
 """
 
+m.get_root().html.add_child(folium.Element(legend_html))
 m.get_root().html.add_child(folium.Element(legend_html))
 m.save('index.html')
