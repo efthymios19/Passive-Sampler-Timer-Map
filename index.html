@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_14dd922feba3e265b615388bf55dd9f9 {
+                #map_6df00b58002b6a931662b0a8041168ff {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -57,20 +57,24 @@
      <i class="fa fa-circle" style="color:red"></i> Ready to Collect
 </div>
     
-            <div class="folium-map" id="map_14dd922feba3e265b615388bf55dd9f9" ></div>
+            <div class="folium-map" id="map_6df00b58002b6a931662b0a8041168ff" ></div>
         
 </body>
 <script>
     
     
-            var map_14dd922feba3e265b615388bf55dd9f9 = L.map(
-                "map_14dd922feba3e265b615388bf55dd9f9",
+            var map_6df00b58002b6a931662b0a8041168ff = L.map(
+                "map_6df00b58002b6a931662b0a8041168ff",
                 {
                     center: [38.022573671394134, 23.74427917368584],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
-                    zoomControl: true,
-                    preferCanvas: false,
+                    ...{
+  "maxBounds": null,
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
                 }
             );
 
@@ -78,346 +82,421 @@
 
         
     
-            var tile_layer_109013de941d879486eb57465504e3c5 = L.tileLayer(
+            var tile_layer_98c2e42ccb2957f1464706d387bf09c7 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
             );
         
     
-            tile_layer_109013de941d879486eb57465504e3c5.addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            tile_layer_98c2e42ccb2957f1464706d387bf09c7.addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-            var circle_marker_8a552606d6676009370054c9c745d965 = L.circleMarker(
+            var circle_marker_e9dfefae9207595a8433689f331f47a3 = L.circleMarker(
                 [37.9550567, 23.7030283],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_d053f6ef1a72663407dd3b22051f11ce = L.popup({"maxWidth": 300});
+        var popup_fa043270cef07dfb3270660c16657844 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_3da8b8e89ff1f8c801be04990205b77a = $(`<div id="html_3da8b8e89ff1f8c801be04990205b77a" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 14:51:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps0'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_d053f6ef1a72663407dd3b22051f11ce.setContent(html_3da8b8e89ff1f8c801be04990205b77a);
+                var html_c1ca2d7ba4230a2726df054f2dd2fdc1 = $(`<div id="html_c1ca2d7ba4230a2726df054f2dd2fdc1" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 14:51:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps0'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_fa043270cef07dfb3270660c16657844.setContent(html_c1ca2d7ba4230a2726df054f2dd2fdc1);
             
         
 
-        circle_marker_8a552606d6676009370054c9c745d965.bindPopup(popup_d053f6ef1a72663407dd3b22051f11ce)
+        circle_marker_e9dfefae9207595a8433689f331f47a3.bindPopup(popup_fa043270cef07dfb3270660c16657844)
         ;
 
         
     
     
-            var circle_marker_16ba85081e2c4e9aed18b925b3ce67c0 = L.circleMarker(
+            var circle_marker_a95df7dd0ce03d12f812007693744cfd = L.circleMarker(
                 [38.0410332, 23.7039141],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_19bf5995c61bb97b71e39c624df41e3c = L.popup({"maxWidth": 300});
+        var popup_c204fd0fc0117e3a83700dc0faf2ffbf = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_2aa22ac4210565d500b1d463627bbf04 = $(`<div id="html_2aa22ac4210565d500b1d463627bbf04" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH22<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 16:24:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps1'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_19bf5995c61bb97b71e39c624df41e3c.setContent(html_2aa22ac4210565d500b1d463627bbf04);
+                var html_39125d892b91cccb2db280e565a320f4 = $(`<div id="html_39125d892b91cccb2db280e565a320f4" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH22<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 16:24:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps1'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_c204fd0fc0117e3a83700dc0faf2ffbf.setContent(html_39125d892b91cccb2db280e565a320f4);
             
         
 
-        circle_marker_16ba85081e2c4e9aed18b925b3ce67c0.bindPopup(popup_19bf5995c61bb97b71e39c624df41e3c)
+        circle_marker_a95df7dd0ce03d12f812007693744cfd.bindPopup(popup_c204fd0fc0117e3a83700dc0faf2ffbf)
         ;
 
         
     
     
-            var circle_marker_4784a7c46ef46a6ba46fe870f7cf7ece = L.circleMarker(
+            var circle_marker_1f15392e9e2848f588ef6c49fc380442 = L.circleMarker(
                 [38.0616339, 23.7759857],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_86aeb0f412b9c41214d693f534648e72 = L.popup({"maxWidth": 300});
+        var popup_6e1416aa739e716e903672cb87641476 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_ae2daaba517c903a867a1288c1b441a3 = $(`<div id="html_ae2daaba517c903a867a1288c1b441a3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH30<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-12-02 13:11:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps2'>7.0</span> days<br><b>CPS End Date:</b> 2024-12-17<br></div>`)[0];
-                popup_86aeb0f412b9c41214d693f534648e72.setContent(html_ae2daaba517c903a867a1288c1b441a3);
+                var html_b8cace200fdddcec7d754119387931a8 = $(`<div id="html_b8cace200fdddcec7d754119387931a8" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH30<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-12-02 13:11:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps2'>6.0</span> days<br><b>CPS End Date:</b> 2024-12-17<br></div>`)[0];
+                popup_6e1416aa739e716e903672cb87641476.setContent(html_b8cace200fdddcec7d754119387931a8);
             
         
 
-        circle_marker_4784a7c46ef46a6ba46fe870f7cf7ece.bindPopup(popup_86aeb0f412b9c41214d693f534648e72)
+        circle_marker_1f15392e9e2848f588ef6c49fc380442.bindPopup(popup_6e1416aa739e716e903672cb87641476)
         ;
 
         
     
     
-            var circle_marker_c60d9761e74bb15511c597b2861c5d4d = L.circleMarker(
+            var circle_marker_22ae67c3d9bb89d2888daff12663c809 = L.circleMarker(
                 [38.0594433, 23.8756325],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_6ea50ce3b68b0d0ed2530c5f1c148b8e = L.popup({"maxWidth": 300});
+        var popup_c237974300c07d2601fca1dab4da1127 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_cb44e35ef5fc4d6fb9c46513b9a3039e = $(`<div id="html_cb44e35ef5fc4d6fb9c46513b9a3039e" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH34<br><b>Type:</b> cps<br><b>Installation Date:</b> 2024-10-30 14:21:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps3'>0.0</span> days<br><b>CPS End Date:</b> 2024-11-14<br></div>`)[0];
-                popup_6ea50ce3b68b0d0ed2530c5f1c148b8e.setContent(html_cb44e35ef5fc4d6fb9c46513b9a3039e);
+                var html_d60935b4144c982157f9bf14038122c5 = $(`<div id="html_d60935b4144c982157f9bf14038122c5" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH34<br><b>Type:</b> cps<br><b>Installation Date:</b> 2024-10-30 14:21:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps3'>0.0</span> days<br><b>CPS End Date:</b> 2024-11-14<br></div>`)[0];
+                popup_c237974300c07d2601fca1dab4da1127.setContent(html_d60935b4144c982157f9bf14038122c5);
             
         
 
-        circle_marker_c60d9761e74bb15511c597b2861c5d4d.bindPopup(popup_6ea50ce3b68b0d0ed2530c5f1c148b8e)
+        circle_marker_22ae67c3d9bb89d2888daff12663c809.bindPopup(popup_c237974300c07d2601fca1dab4da1127)
         ;
 
         
     
     
-            var circle_marker_193b7e5bf0127bef17834613007ecc22 = L.circleMarker(
+            var circle_marker_bcf84a4b75ffe403e8c8f57e77554b78 = L.circleMarker(
                 [38.1047751, 23.7671598],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_56552014ee48f334168c4134b5114864 = L.popup({"maxWidth": 300});
+        var popup_5a8ab4f13b45c34bd3d63fdf228d8024 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_265cb118fc0585f8dfd99973fc8161f2 = $(`<div id="html_265cb118fc0585f8dfd99973fc8161f2" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH35<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 12:23:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps4'>4.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
-                popup_56552014ee48f334168c4134b5114864.setContent(html_265cb118fc0585f8dfd99973fc8161f2);
+                var html_584bb89a239d0d9882cc4784362bbeef = $(`<div id="html_584bb89a239d0d9882cc4784362bbeef" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH35<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 12:23:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps4'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
+                popup_5a8ab4f13b45c34bd3d63fdf228d8024.setContent(html_584bb89a239d0d9882cc4784362bbeef);
             
         
 
-        circle_marker_193b7e5bf0127bef17834613007ecc22.bindPopup(popup_56552014ee48f334168c4134b5114864)
+        circle_marker_bcf84a4b75ffe403e8c8f57e77554b78.bindPopup(popup_5a8ab4f13b45c34bd3d63fdf228d8024)
         ;
 
         
     
     
-            var circle_marker_88cf927d301b503d91150c74b13036d1 = L.circleMarker(
+            var circle_marker_812216bc4ab6315e2b4beefc3bdcf969 = L.circleMarker(
                 [38.0110098, 23.7943518],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_6d78401ef5bce7f0036267fe4bb9c11e = L.popup({"maxWidth": 300});
+        var popup_1a26cb6a23c2d5abf9b31a8025c2380e = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_451d07f7c4f3a0d43b3c611b97511fe4 = $(`<div id="html_451d07f7c4f3a0d43b3c611b97511fe4" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 11:20:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>4.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
-                popup_6d78401ef5bce7f0036267fe4bb9c11e.setContent(html_451d07f7c4f3a0d43b3c611b97511fe4);
+                var html_84fd38848728455246c09159ad46e539 = $(`<div id="html_84fd38848728455246c09159ad46e539" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 11:20:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
+                popup_1a26cb6a23c2d5abf9b31a8025c2380e.setContent(html_84fd38848728455246c09159ad46e539);
             
         
 
-        circle_marker_88cf927d301b503d91150c74b13036d1.bindPopup(popup_6d78401ef5bce7f0036267fe4bb9c11e)
+        circle_marker_812216bc4ab6315e2b4beefc3bdcf969.bindPopup(popup_1a26cb6a23c2d5abf9b31a8025c2380e)
         ;
 
         
     
     
-            var circle_marker_aa78bd62311396517f3281f9d653f17b = L.circleMarker(
+            var circle_marker_857ffeaabbedd6bcfa0453a5f30f7c6b = L.circleMarker(
                 [37.9928898, 23.7065591],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_f4489581254eb79fbd1bc0adf5c7832a = L.popup({"maxWidth": 300});
+        var popup_7cd873cee37646d569d24d524926163d = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_4e431e4839d2481c39ef321130a33d43 = $(`<div id="html_4e431e4839d2481c39ef321130a33d43" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH7<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2024-11-28 12:53:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps6'>0.0</span> days<br><b>VPS End Date:</b> 2024-12-10<br><b>CPS Days Remaining:</b> <span id='timer_cps6'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_f4489581254eb79fbd1bc0adf5c7832a.setContent(html_4e431e4839d2481c39ef321130a33d43);
+                var html_1195f674304d70fe5948cd61e99937cb = $(`<div id="html_1195f674304d70fe5948cd61e99937cb" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH7<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2024-11-28 12:53:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps6'>0.0</span> days<br><b>VPS End Date:</b> 2024-12-10<br><b>CPS Days Remaining:</b> <span id='timer_cps6'>2.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_7cd873cee37646d569d24d524926163d.setContent(html_1195f674304d70fe5948cd61e99937cb);
             
         
 
-        circle_marker_aa78bd62311396517f3281f9d653f17b.bindPopup(popup_f4489581254eb79fbd1bc0adf5c7832a)
+        circle_marker_857ffeaabbedd6bcfa0453a5f30f7c6b.bindPopup(popup_7cd873cee37646d569d24d524926163d)
         ;
 
         
     
     
-            var circle_marker_370d00d7965ad5b3f8db3d9b85527855 = L.circleMarker(
+            var circle_marker_3c5d40f367b5a8b2b19fbb0b3f0a3a38 = L.circleMarker(
                 [38.074408, 23.7581039],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_a05f495ae0f71d247c71c4ae7ab3d7d9 = L.popup({"maxWidth": 300});
+        var popup_b75a02f646e8428463db4559c230ec14 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_8c70bc1af8eddaa6bd997db250b1f716 = $(`<div id="html_8c70bc1af8eddaa6bd997db250b1f716" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Agfan<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 13:10:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps7'>4.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
-                popup_a05f495ae0f71d247c71c4ae7ab3d7d9.setContent(html_8c70bc1af8eddaa6bd997db250b1f716);
+                var html_6faa13c359a6d7c9bb08f1979ad6a219 = $(`<div id="html_6faa13c359a6d7c9bb08f1979ad6a219" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Agfan<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 13:10:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps7'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
+                popup_b75a02f646e8428463db4559c230ec14.setContent(html_6faa13c359a6d7c9bb08f1979ad6a219);
             
         
 
-        circle_marker_370d00d7965ad5b3f8db3d9b85527855.bindPopup(popup_a05f495ae0f71d247c71c4ae7ab3d7d9)
+        circle_marker_3c5d40f367b5a8b2b19fbb0b3f0a3a38.bindPopup(popup_b75a02f646e8428463db4559c230ec14)
         ;
 
         
     
     
-            var circle_marker_7cabe6666b127a75eb0a6da8cc313cbc = L.circleMarker(
+            var circle_marker_fe00bc2f83260f5fe28de7980ae22cb2 = L.circleMarker(
                 [37.9838956, 23.6663142],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_d1879762f875dd3f6b43a45cbcfaf7ef = L.popup({"maxWidth": 300});
+        var popup_b1dbaaed65b2a3cf9542f5518ddfc376 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_e5d244951e64a763c8487eee361254e9 = $(`<div id="html_e5d244951e64a763c8487eee361254e9" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Aigalew<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 10:01:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps8'>4.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
-                popup_d1879762f875dd3f6b43a45cbcfaf7ef.setContent(html_e5d244951e64a763c8487eee361254e9);
+                var html_30d66b9fe2a4411b5382d3dac1803cba = $(`<div id="html_30d66b9fe2a4411b5382d3dac1803cba" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Aigalew<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-29 10:01:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps8'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-14<br></div>`)[0];
+                popup_b1dbaaed65b2a3cf9542f5518ddfc376.setContent(html_30d66b9fe2a4411b5382d3dac1803cba);
             
         
 
-        circle_marker_7cabe6666b127a75eb0a6da8cc313cbc.bindPopup(popup_d1879762f875dd3f6b43a45cbcfaf7ef)
+        circle_marker_fe00bc2f83260f5fe28de7980ae22cb2.bindPopup(popup_b1dbaaed65b2a3cf9542f5518ddfc376)
         ;
 
         
     
     
-            var circle_marker_c5889a94b9d0baf2c97a3dd20f4d2e6d = L.circleMarker(
+            var circle_marker_bfe829baea36aa5d3490b8d123716e14 = L.circleMarker(
                 [37.9295254, 23.7476211],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_7af169871c1dddfa65debe3c9bc913b6 = L.popup({"maxWidth": 300});
+        var popup_0db689c50c94bd6a4e01cff3171935c5 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_806a15c1cfc1f2581c32b9d4a86a8f07 = $(`<div id="html_806a15c1cfc1f2581c32b9d4a86a8f07" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Ath1<br><b>Type:</b> vps dgts cps<br><b>Installation Date:</b> 2024-10-28 10:45:00+02:00<br></div>`)[0];
-                popup_7af169871c1dddfa65debe3c9bc913b6.setContent(html_806a15c1cfc1f2581c32b9d4a86a8f07);
+                var html_9161ddb243515d90eaeac2b3184ae761 = $(`<div id="html_9161ddb243515d90eaeac2b3184ae761" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Ath1<br><b>Type:</b> vps dgts cps<br><b>Installation Date:</b> 2024-10-28 10:45:00+02:00<br></div>`)[0];
+                popup_0db689c50c94bd6a4e01cff3171935c5.setContent(html_9161ddb243515d90eaeac2b3184ae761);
             
         
 
-        circle_marker_c5889a94b9d0baf2c97a3dd20f4d2e6d.bindPopup(popup_7af169871c1dddfa65debe3c9bc913b6)
+        circle_marker_bfe829baea36aa5d3490b8d123716e14.bindPopup(popup_0db689c50c94bd6a4e01cff3171935c5)
         ;
 
         
     
     
-            var circle_marker_7973e85cf14b2adaa1ee8287530dbcf8 = L.circleMarker(
+            var circle_marker_f4ecd9c4c92ad531de8a28000d7c30b8 = L.circleMarker(
                 [38.0921795, 23.7703225],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_5dc5a80108a7486ba0d2e7c56f482e34 = L.popup({"maxWidth": 300});
+        var popup_e12354a03922a61b91e56554799115e4 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_21620c071d282b669a0a6c1cf5418b3c = $(`<div id="html_21620c071d282b669a0a6c1cf5418b3c" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 17:37:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps10'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_5dc5a80108a7486ba0d2e7c56f482e34.setContent(html_21620c071d282b669a0a6c1cf5418b3c);
+                var html_407f3b0a63dc326553adf1cabf809dd8 = $(`<div id="html_407f3b0a63dc326553adf1cabf809dd8" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 17:37:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps10'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_e12354a03922a61b91e56554799115e4.setContent(html_407f3b0a63dc326553adf1cabf809dd8);
             
         
 
-        circle_marker_7973e85cf14b2adaa1ee8287530dbcf8.bindPopup(popup_5dc5a80108a7486ba0d2e7c56f482e34)
+        circle_marker_f4ecd9c4c92ad531de8a28000d7c30b8.bindPopup(popup_e12354a03922a61b91e56554799115e4)
         ;
 
         
     
     
-            var circle_marker_bc4d32e0861356bec8e14523ae4292d0 = L.circleMarker(
+            var circle_marker_c5615793b6f5a0295c58148434811e51 = L.circleMarker(
                 [38.0492563, 23.7375483],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_5de27d6045eb72b4e5448858a903a4b8 = L.popup({"maxWidth": 300});
+        var popup_2ad830056a2f115ae8d390ec6d005f39 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_70939b68ce5e30f223f0448ab1f9e4a3 = $(`<div id="html_70939b68ce5e30f223f0448ab1f9e4a3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> KM<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 17:07:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps12'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_5de27d6045eb72b4e5448858a903a4b8.setContent(html_70939b68ce5e30f223f0448ab1f9e4a3);
+                var html_e04139137c5133381cfd4ae93b566ac1 = $(`<div id="html_e04139137c5133381cfd4ae93b566ac1" style="width: 100.0%; height: 100.0%;"><b>ID:</b> KM<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 17:07:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps12'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_2ad830056a2f115ae8d390ec6d005f39.setContent(html_e04139137c5133381cfd4ae93b566ac1);
             
         
 
-        circle_marker_bc4d32e0861356bec8e14523ae4292d0.bindPopup(popup_5de27d6045eb72b4e5448858a903a4b8)
+        circle_marker_c5615793b6f5a0295c58148434811e51.bindPopup(popup_2ad830056a2f115ae8d390ec6d005f39)
         ;
 
         
     
     
-            var circle_marker_e13580533a3e0ce9c3524c171ae2043a = L.circleMarker(
+            var circle_marker_39931b91550f29cd3553bb24e63295c6 = L.circleMarker(
                 [37.9405638, 23.6704378],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_20bb3ed1f3ba78f24ac11d7eb1f275e7 = L.popup({"maxWidth": 300});
+        var popup_e1f807f0ccb43fd0e283237a740659ba = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_09b2718cbe56afb5c373457f7d98be4c = $(`<div id="html_09b2718cbe56afb5c373457f7d98be4c" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Marina<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 15:18:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps13'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_20bb3ed1f3ba78f24ac11d7eb1f275e7.setContent(html_09b2718cbe56afb5c373457f7d98be4c);
+                var html_07a12f746d6b774ce3e8714cf51d6612 = $(`<div id="html_07a12f746d6b774ce3e8714cf51d6612" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Marina<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-11-28 15:18:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps13'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_e1f807f0ccb43fd0e283237a740659ba.setContent(html_07a12f746d6b774ce3e8714cf51d6612);
             
         
 
-        circle_marker_e13580533a3e0ce9c3524c171ae2043a.bindPopup(popup_20bb3ed1f3ba78f24ac11d7eb1f275e7)
+        circle_marker_39931b91550f29cd3553bb24e63295c6.bindPopup(popup_e1f807f0ccb43fd0e283237a740659ba)
         ;
 
         
     
     
-            var circle_marker_95dbdb280431562e7b1da06589d242cf = L.circleMarker(
+            var circle_marker_95152b2134ecf9f64ea22c2d7853366c = L.circleMarker(
                 [38.077928213700396, 23.77072135265932],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_7be3871b4bfb8f87f19ea839cfff2502 = L.popup({"maxWidth": 300});
+        var popup_924b97c0bc6376605f5629e8b8477674 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_081b14a566306ad3a39ff625ecbda00e = $(`<div id="html_081b14a566306ad3a39ff625ecbda00e" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Pyrna<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-12-02 13:15:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps14'>7.0</span> days<br><b>CPS End Date:</b> 2024-12-17<br></div>`)[0];
-                popup_7be3871b4bfb8f87f19ea839cfff2502.setContent(html_081b14a566306ad3a39ff625ecbda00e);
+                var html_bd6f7dd5684e0564bafc98b663432daa = $(`<div id="html_bd6f7dd5684e0564bafc98b663432daa" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Pyrna<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-12-02 13:15:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps14'>6.0</span> days<br><b>CPS End Date:</b> 2024-12-17<br></div>`)[0];
+                popup_924b97c0bc6376605f5629e8b8477674.setContent(html_bd6f7dd5684e0564bafc98b663432daa);
             
         
 
-        circle_marker_95dbdb280431562e7b1da06589d242cf.bindPopup(popup_7be3871b4bfb8f87f19ea839cfff2502)
+        circle_marker_95152b2134ecf9f64ea22c2d7853366c.bindPopup(popup_924b97c0bc6376605f5629e8b8477674)
         ;
 
         
     
     
-            var circle_marker_2d1c12396d494919103171b144e573e7 = L.circleMarker(
+            var circle_marker_1e82fabf03b2c1a91e58eeebab1f48d0 = L.circleMarker(
                 [37.9733271, 23.6818112],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_9b77664cc42c98306e045c000e2d38b6 = L.popup({"maxWidth": 300});
+        var popup_b5703259ebc63586d57aaeee0bd9b640 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_6bef71b8bd47572d6bed8164d189be2f = $(`<div id="html_6bef71b8bd47572d6bed8164d189be2f" style="width: 100.0%; height: 100.0%;"><b>ID:</b> REN<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2024-11-28 13:36:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps15'>0.0</span> days<br><b>VPS End Date:</b> 2024-12-10<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_9b77664cc42c98306e045c000e2d38b6.setContent(html_6bef71b8bd47572d6bed8164d189be2f);
+                var html_5fa73a8791fd9c42aaea076372bf8461 = $(`<div id="html_5fa73a8791fd9c42aaea076372bf8461" style="width: 100.0%; height: 100.0%;"><b>ID:</b> REN<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2024-11-28 13:36:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps15'>0.0</span> days<br><b>VPS End Date:</b> 2024-12-10<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>2.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_b5703259ebc63586d57aaeee0bd9b640.setContent(html_5fa73a8791fd9c42aaea076372bf8461);
             
         
 
-        circle_marker_2d1c12396d494919103171b144e573e7.bindPopup(popup_9b77664cc42c98306e045c000e2d38b6)
+        circle_marker_1e82fabf03b2c1a91e58eeebab1f48d0.bindPopup(popup_b5703259ebc63586d57aaeee0bd9b640)
         ;
 
         
     
     
-            var circle_marker_4f5448c45b44a1a1afc4ac663f6782f0 = L.circleMarker(
+            var circle_marker_ff595727ef7040e731c852efa2601046 = L.circleMarker(
                 [37.9750943, 23.747303],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_14dd922feba3e265b615388bf55dd9f9);
+            ).addTo(map_6df00b58002b6a931662b0a8041168ff);
         
     
-        var popup_22eee6e0a5e1e89f87854d8ab405bde2 = L.popup({"maxWidth": 300});
+        var popup_09b84ff6fe9d5682534e0f2357ccd665 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
 
         
             
-                var html_911d8915316644e79b11bcf3cf5a0127 = $(`<div id="html_911d8915316644e79b11bcf3cf5a0127" style="width: 100.0%; height: 100.0%;"><b>ID:</b> RIZ<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2024-11-28 11:41:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps16'>0.0</span> days<br><b>VPS End Date:</b> 2024-12-10<br><b>CPS Days Remaining:</b> <span id='timer_cps16'>3.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
-                popup_22eee6e0a5e1e89f87854d8ab405bde2.setContent(html_911d8915316644e79b11bcf3cf5a0127);
+                var html_9b5009f09384c08ebac249adc5d15ea3 = $(`<div id="html_9b5009f09384c08ebac249adc5d15ea3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> RIZ<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2024-11-28 11:41:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps16'>0.0</span> days<br><b>VPS End Date:</b> 2024-12-10<br><b>CPS Days Remaining:</b> <span id='timer_cps16'>2.0</span> days<br><b>CPS End Date:</b> 2024-12-13<br></div>`)[0];
+                popup_09b84ff6fe9d5682534e0f2357ccd665.setContent(html_9b5009f09384c08ebac249adc5d15ea3);
             
         
 
-        circle_marker_4f5448c45b44a1a1afc4ac663f6782f0.bindPopup(popup_22eee6e0a5e1e89f87854d8ab405bde2)
+        circle_marker_ff595727ef7040e731c852efa2601046.bindPopup(popup_09b84ff6fe9d5682534e0f2357ccd665)
         ;
 
         
