@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d9f139358481795308c386b5aa5637a2 {
+                #map_4857d841d97d635e281138dfbae2f04f {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -57,14 +57,14 @@
      <i class="fa fa-circle" style="color:red"></i> Ready to Collect
 </div>
     
-            <div class="folium-map" id="map_d9f139358481795308c386b5aa5637a2" ></div>
+            <div class="folium-map" id="map_4857d841d97d635e281138dfbae2f04f" ></div>
         
 </body>
 <script>
     
     
-            var map_d9f139358481795308c386b5aa5637a2 = L.map(
-                "map_d9f139358481795308c386b5aa5637a2",
+            var map_4857d841d97d635e281138dfbae2f04f = L.map(
+                "map_4857d841d97d635e281138dfbae2f04f",
                 {
                     center: [38.021278052941184, 23.740256405882356],
                     crs: L.CRS.EPSG3857,
@@ -81,7 +81,7 @@
 
         
     
-            var tile_layer_d99a5133ea2fc4505b8c464a08de77b5 = L.tileLayer(
+            var tile_layer_4c31c12b1705f9768ad19db09e1f0d11 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -98,27 +98,27 @@
             );
         
     
-            tile_layer_d99a5133ea2fc4505b8c464a08de77b5.addTo(map_d9f139358481795308c386b5aa5637a2);
+            tile_layer_4c31c12b1705f9768ad19db09e1f0d11.addTo(map_4857d841d97d635e281138dfbae2f04f);
         
     
-            var circle_marker_99f4db80e739d01ba93e9e1092c3333a = L.circleMarker(
+            var circle_marker_8713c5046ac9eff7a30cf2506b47b372 = L.circleMarker(
                 [37.9555394, 23.7039175],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_d9f139358481795308c386b5aa5637a2);
+            ).addTo(map_4857d841d97d635e281138dfbae2f04f);
         
     
-        var popup_49b7e177a196065ca74fab4e4eacae11 = L.popup({
+        var popup_97973f14fd287a2bb08c5aef17b6c67f = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_744153c7909c7155b8f86514d76e8298 = $(`<div id="html_744153c7909c7155b8f86514d76e8298" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-12-13 12:55:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps0'>0.0</span> days<br><b>CPS End Date:</b> 2024-12-28<br></div>`)[0];
-                popup_49b7e177a196065ca74fab4e4eacae11.setContent(html_744153c7909c7155b8f86514d76e8298);
+                var html_23ca3d29b9ad61455e653be13e17f0cb = $(`<div id="html_23ca3d29b9ad61455e653be13e17f0cb" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2024-12-13 12:55:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps0'>0.0</span> days<br><b>CPS End Date:</b> 2024-12-28<br></div>`)[0];
+                popup_97973f14fd287a2bb08c5aef17b6c67f.setContent(html_23ca3d29b9ad61455e653be13e17f0cb);
             
         
 
-        circle_marker_99f4db80e739d01ba93e9e1092c3333a.bindPopup(popup_49b7e177a196065ca74fab4e4eacae11)
+        circle_marker_8713c5046ac9eff7a30cf2506b47b372.bindPopup(popup_97973f14fd287a2bb08c5aef17b6c67f)
         ;
 
         
