@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0192ba2b2de18afada5a82ca42086f17 {
+                #map_87011d041716201dd057693385e73d2c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -57,16 +57,16 @@
      <i class="fa fa-circle" style="color:red"></i> Ready to Collect
 </div>
     
-            <div class="folium-map" id="map_0192ba2b2de18afada5a82ca42086f17" ></div>
+            <div class="folium-map" id="map_87011d041716201dd057693385e73d2c" ></div>
         
 </body>
 <script>
     
     
-            var map_0192ba2b2de18afada5a82ca42086f17 = L.map(
-                "map_0192ba2b2de18afada5a82ca42086f17",
+            var map_87011d041716201dd057693385e73d2c = L.map(
+                "map_87011d041716201dd057693385e73d2c",
                 {
-                    center: [38.02495149999999, 23.741639826315787],
+                    center: [38.02121998333333, 23.740034622222222],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 10,
@@ -81,7 +81,7 @@
 
         
     
-            var tile_layer_64e5ff789e84079b0d265e7e07f99667 = L.tileLayer(
+            var tile_layer_d3e0f9bf83066f88144e18efdb4759a0 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -98,30 +98,7 @@
             );
         
     
-            tile_layer_64e5ff789e84079b0d265e7e07f99667.addTo(map_0192ba2b2de18afada5a82ca42086f17);
+            tile_layer_d3e0f9bf83066f88144e18efdb4759a0.addTo(map_87011d041716201dd057693385e73d2c);
         
-    
-            var circle_marker_42a4f5448b3992d5f78ba729e4d5f8c3 = L.circleMarker(
-                [38.0921188, 23.7705335],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_0192ba2b2de18afada5a82ca42086f17);
-        
-    
-        var popup_a941e77bad82db3dda4dc4c7376d355d = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_0ae47465d01396bd8e60a55e6f4d02d8 = $(`<div id="html_0ae47465d01396bd8e60a55e6f4d02d8" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias <br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-02-06 15:06:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps11'>0.0</span> days<br><b>CPS End Date:</b> 2025-02-21<br></div>`)[0];
-                popup_a941e77bad82db3dda4dc4c7376d355d.setContent(html_0ae47465d01396bd8e60a55e6f4d02d8);
-            
-        
-
-        circle_marker_42a4f5448b3992d5f78ba729e4d5f8c3.bindPopup(popup_a941e77bad82db3dda4dc4c7376d355d)
-        ;
-
-        
-    
 </script>
 </html>
