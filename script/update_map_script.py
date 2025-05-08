@@ -2,11 +2,54 @@ import pandas as pd
 import folium 
 from datetime import timedelta
 
-### Import kobo-csv
-ps = pd.read_csv('data/data.csv', sep=';')
+
+#Import kobo from API
+token= "c5d9b5fb881c7f4799e126990107af5cbd45a8d1"
+form_id= 'a9WRp8ft8hBPCQesFGbZ5x'
+kobo_base_url= "https://kobo.humanitarianresponse.info/api/v2"
+#Access account with API
+kobo=KoboExtractor(token,kobo_base_url)
+#Get information for all the forms
+asset=kobo.list_assets()
+#Get information for the passive samplers form
+pas=kobo.get_asset(form_id)
+#Get the data from the form
+data=kobo.get_data(form_id)
+api_df=pd.json_normalize(data['results'])
+api_df=api_df[["ID",
+    "Partner_Abbreviation",
+    "Water_Resource",
+    "Passive_Sampler_Type",
+    "VPS_Number_of_nitrocelluloce_filters",
+    "VPS_Number_of_nylon_filters",
+    "CPS_Number_of_installed_CPS",
+    "CPS_sorbent",
+    "DGTs_Number_of_installed_DGTs",
+    "Passive_sampler_Case_Type",
+    "_3D_printed_case_material",
+    "Passive_samplers_installation_depth_m",
+    "Installation_Collection",
+    "Date_Time",
+    "Location",
+    "Elevation_m",
+    "Air_Temperature_oC",
+    "Well_diameter_cm",
+    "Well_casing_material",
+    "Well_Depth_m",
+    "Groundwater_level_m",
+    "Distance_of_piezometer_from_ground_m",
+    "EC_S_cm",
+    "pH",
+    "DO_mg_l",
+    "Water_Temperature_oC",
+    "Picture",
+    "Comments"]]
+api_df[["_Location_latitude", "_Location_longitude", "Elevation", "Precision"]]=api_df['Location'].str.split(' ', expand=True)
+api_df['_Location_latitude']=api_df['_Location_latitude'].astype(float)
+api_df['_Location_longitude']=api_df['_Location_longitude'].astype(float)
 
 # Convert 'Date_Time' to datetime and sort by date for each sampling point
-filtered_ps = ps.copy()
+filtered_ps = api_df
 filtered_ps['Date_Time'] = pd.to_datetime(filtered_ps['Date_Time'], utc=True).dt.tz_convert('Europe/Athens')
 filtered_ps = filtered_ps.sort_values(by=['ID', 'Date_Time']).groupby('ID').last().reset_index()
 
