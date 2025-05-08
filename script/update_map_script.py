@@ -80,32 +80,27 @@ def calculate_days_remaining(row):
 filtered_ps[['days_remaining_VPS', 'termination_date_VPS', 'days_remaining_CPS', 'termination_date_CPS']] = filtered_ps.apply(calculate_days_remaining, axis=1)
 
 # Create the map
-m = folium.Map(location=[filtered_ps['_Location_latitude'].mean(), filtered_ps['_Location_longitude'].mean()], zoom_start=10)
+m = folium.Map(location=[filtered_api_df['_Location_latitude'].mean(), filtered_api_df['_Location_longitude'].mean()], zoom_start=10)
 
-# Add markers
-for index, row in filtered_ps.iterrows():
+# Add markers based on the 'Installation', 'Collection', or 'Installation_Collection' status
+for index, row in filtered_api_df.iterrows():
     if row['Installation_Collection'] == 'Collection':
+        # Skip this point; it won't appear on the map
         continue
     
-    # Popup content
-    popup_content = f"<b>ID:</b> {row['ID']}<br><b>Type:</b> {row['Passive_Sampler_Type']}<br><b>Installation Date:</b> {row['Date_Time'].strftime('%Y-%m-%d %H:%M')}<br>"
+    # Popup content setup
+    popup_content = f"<b>ID:</b> {row['ID']}<br><b>Type:</b> {row['Passive_Sampler_Type']}<br><b>Installation Date:</b> {row['Date_Time']}<br>"
     
-    # Add VPS info if exists
+    # Add VPS or CPS information if relevant
     if pd.notna(row['termination_date_VPS']):
-        popup_content += f"<b>VPS Days Remaining:</b> <span id='timer_vps{index}'>{row['days_remaining_VPS']}</span> days<br>"
-        popup_content += f"<b>VPS End Date:</b> {row['termination_date_VPS'].strftime('%Y-%m-%d')}<br>"
-    
-    # Add CPS info if exists
+        termination_date_vps_str = row['termination_date_VPS'].strftime("%Y-%m-%d")
+        popup_content += f"<b>VPS Days Remaining:</b> <span id='timer_vps{index}'>{row['days_remaining_VPS']}</span> days<br><b>VPS End Date:</b> {termination_date_vps_str}<br>"
     if pd.notna(row['termination_date_CPS']):
-        popup_content += f"<b>CPS Days Remaining:</b> <span id='timer_cps{index}'>{row['days_remaining_CPS']}</span> days<br>"
-        popup_content += f"<b>CPS End Date:</b> {row['termination_date_CPS'].strftime('%Y-%m-%d')}<br>"
+        termination_date_cps_str = row['termination_date_CPS'].strftime("%Y-%m-%d")
+        popup_content += f"<b>CPS Days Remaining:</b> <span id='timer_cps{index}'>{row['days_remaining_CPS']}</span> days<br><b>CPS End Date:</b> {termination_date_cps_str}<br>"
     
-    # Determine marker color - safely handle None values
-    vps_ok = row['days_remaining_VPS'] > 0 if pd.notna(row['days_remaining_VPS']) else True
-    cps_ok = row['days_remaining_CPS'] > 0 if pd.notna(row['days_remaining_CPS']) else True
-    
-    initial_color = "red" if not (vps_ok and cps_ok) else "green"
-    
+    # Marker color based on days remaining
+    initial_color = "red" if (row['days_remaining_VPS'] <= 0 or row['days_remaining_CPS'] <= 0) else "green"
     folium.CircleMarker(
         location=(row['_Location_latitude'], row['_Location_longitude']),
         radius=8,
@@ -116,4 +111,18 @@ for index, row in filtered_ps.iterrows():
         popup=folium.Popup(popup_content, max_width=300),
     ).add_to(m)
 
-m.save('index.html')
+# Add a legend
+legend_html = """
+<div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 150px; height: 90px; 
+     background-color: white; z-index:9999; font-size:14px;
+     border:2px solid grey; border-radius:8px; padding: 10px;">
+     <strong>Legend</strong><br>
+     <i class="fa fa-circle" style="color:green"></i> Installed<br>
+     <i class="fa fa-circle" style="color:red"></i> Ready to Collect
+</div>
+"""
+
+m.get_root().html.add_child(folium.Element(legend_html))
+
+display(m)
