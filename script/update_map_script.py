@@ -80,10 +80,10 @@ def calculate_days_remaining(row):
 filtered_ps[['days_remaining_VPS', 'termination_date_VPS', 'days_remaining_CPS', 'termination_date_CPS']] = filtered_ps.apply(calculate_days_remaining, axis=1)
 
 # Create the map
-m = folium.Map(location=[filtered_api_df['_Location_latitude'].mean(), filtered_api_df['_Location_longitude'].mean()], zoom_start=10)
+m = folium.Map(location=[filtered_ps['_Location_latitude'].mean(), filtered_ps['_Location_longitude'].mean()], zoom_start=10)
 
 # Add markers based on the 'Installation', 'Collection', or 'Installation_Collection' status
-for index, row in filtered_api_df.iterrows():
+for index, row in filtered_ps.iterrows():
     if row['Installation_Collection'] == 'Collection':
         # Skip this point; it won't appear on the map
         continue
