@@ -63,7 +63,7 @@ def calculate_days_remaining(row):
     days_remaining_VPS = None
     days_remaining_CPS = None
     
-    sampler_type = row['Passive Sampler Type']
+    sampler_type = row['Passive_Sampler_Type']
     
     # VPS calculations (12 days)
     if sampler_type in ['All of them', 'VPS', 'VPS and DGTs', 'VPS and CPS']:
@@ -88,7 +88,7 @@ for index, row in filtered_ps.iterrows():
         continue
     
     # Popup content
-    popup_content = f"<b>ID:</b> {row['ID']}<br><b>Type:</b> {row['Passive Sampler Type']}<br><b>Installation Date:</b> {row['Date_Time'].strftime('%Y-%m-%d %H:%M')}<br>"
+    popup_content = f"<b>ID:</b> {row['ID']}<br><b>Type:</b> {row['Passive_Sampler_Type']}<br><b>Installation Date:</b> {row['Date_Time'].strftime('%Y-%m-%d %H:%M')}<br>"
     
     # Add VPS info if exists
     if pd.notna(row['termination_date_VPS']):
