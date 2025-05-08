@@ -51,21 +51,10 @@ api_df['_Location_longitude']=api_df['_Location_longitude'].astype(float)
 
 # Convert 'Date_Time' to datetime and sort by date for each sampling point
 filtered_ps = api_df
-filtered_ps['Date_Time'] = pd.to_datetime(filtered_ps['Date_Time'], utc=True).dt.tz_convert('Europe/Athens')
+filtered_ps['Date_Time'] = pd.to_datetime(filtered_ps['Date_Time'])
 filtered_ps = filtered_ps.sort_values(by=['ID', 'Date_Time']).groupby('ID').last().reset_index()
 
 # Calculate days remaining for each row
-today = pd.Timestamp.now(tz='Europe/Athens')
-
-def calculate_days_remaining(row):
-    termination_date_VPS = None
-    termination_date_CPS = None
-    days_remaining_VPS = None
-    days_remaining_CPS = None
-    
-    sampler_type = row['Passive_Sampler_Type']
-   
-# Calculate days remaining for each row with the same function as before
 today = pd.Timestamp.now(tz='Europe/Athens')
 
 def calculate_days_remaining(row):
@@ -114,7 +103,7 @@ m = folium.Map(location=[filtered_ps['_Location_latitude'].mean(), filtered_ps['
 
 # Add markers based on the 'Installation', 'Collection', or 'Installation_Collection' status
 for index, row in filtered_ps.iterrows():
-    if row['Installation_Collection'] == 'Collection':
+    if row['Installation_Collection'] == 'collection':
         # Skip this point; it won't appear on the map
         continue
     
