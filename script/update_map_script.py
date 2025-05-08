@@ -84,7 +84,7 @@ m = folium.Map(location=[filtered_ps['_Location_latitude'].mean(), filtered_ps['
 
 # Add markers
 for index, row in filtered_ps.iterrows():
-    if row['Installation/Collection'] == 'Collection':
+    if row['Installation_Collection'] == 'Collection':
         continue
     
     # Popup content
