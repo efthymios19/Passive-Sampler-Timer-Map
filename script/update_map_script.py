@@ -64,15 +64,45 @@ def calculate_days_remaining(row):
     days_remaining_CPS = None
     
     sampler_type = row['Passive_Sampler_Type']
+   
+# Calculate days remaining for each row with the same function as before
+today = pd.Timestamp.now(tz='Europe/Athens')
+
+def calculate_days_remaining(row):
+    termination_date_VPS = None
+    termination_date_CPS = None
+    days_remaining_VPS = None
+    days_remaining_CPS = None
     
-    # VPS calculations (12 days)
-    if sampler_type in ['All of them', 'VPS', 'VPS and DGTs', 'VPS and CPS']:
+    if row['Passive_Sampler_Type'] == 'all_of_them':
+        termination_date_VPS = row['Date_Time'] + timedelta(days=12)
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_VPS = max((termination_date_VPS - today).days, 0)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive_Sampler_Type'] == 'vps':
         termination_date_VPS = row['Date_Time'] + timedelta(days=12)
         days_remaining_VPS = max((termination_date_VPS - today).days, 0)
-    
-    # CPS/DGT calculations (15 days)
-    if sampler_type in ['All of them', 'CPS and DGTs', 'CPS', 'DGTs', 'VPS and DGTs', 'VPS and CPS']:
+    elif row['Passive_Sampler_Type'] == 'cps_and_dgts':
         termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive_Sampler_Type'] == 'cps':
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive_Sampler_Type'] == 'dgts':
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive_Sampler_Type'] == 'cps_and_dgts':
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive_Sampler_Type'] == 'vps_and_dgts':
+        termination_date_VPS = row['Date_Time'] + timedelta(days=12)
+        days_remaining_VPS = max((termination_date_VPS - today).days, 0)
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_CPS = max((termination_date_CPS - today).days, 0)
+    elif row['Passive_Sampler_Type'] == 'vps_and_cps':
+        termination_date_VPS = row['Date_Time'] + timedelta(days=12)
+        termination_date_CPS = row['Date_Time'] + timedelta(days=15)
+        days_remaining_VPS = max((termination_date_VPS - today).days, 0)
         days_remaining_CPS = max((termination_date_CPS - today).days, 0)
     
     return pd.Series([days_remaining_VPS, termination_date_VPS, days_remaining_CPS, termination_date_CPS])
