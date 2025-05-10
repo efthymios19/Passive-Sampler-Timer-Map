@@ -143,4 +143,5 @@ legend_html = """
      <i class="fa fa-circle" style="color:red"></i> Ready to Collect
 </div>
 """
+m.get_root().html.add_child(folium.Element(legend_html))
 m.save('index.html')
