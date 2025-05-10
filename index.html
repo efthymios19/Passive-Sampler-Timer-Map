@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c18040e422ee8a01c32eefb86bb04fe5 {
+                #map_83f3ecc8c0facc6719918a5ffa14b9cd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,23 @@
 <body>
     
     
-            <div class="folium-map" id="map_c18040e422ee8a01c32eefb86bb04fe5" ></div>
+<div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 150px; height: 90px; 
+     background-color: white; z-index:9999; font-size:14px;
+     border:2px solid grey; border-radius:8px; padding: 10px;">
+     <strong>Legend</strong><br>
+     <i class="fa fa-circle" style="color:green"></i> Installed<br>
+     <i class="fa fa-circle" style="color:red"></i> Ready to Collect
+</div>
+    
+            <div class="folium-map" id="map_83f3ecc8c0facc6719918a5ffa14b9cd" ></div>
         
 </body>
 <script>
     
     
-            var map_c18040e422ee8a01c32eefb86bb04fe5 = L.map(
-                "map_c18040e422ee8a01c32eefb86bb04fe5",
+            var map_83f3ecc8c0facc6719918a5ffa14b9cd = L.map(
+                "map_83f3ecc8c0facc6719918a5ffa14b9cd",
                 {
                     center: [38.01865786842105, 23.73692634736842],
                     crs: L.CRS.EPSG3857,
@@ -63,7 +72,7 @@
 
         
     
-            var tile_layer_d2d2c2da36a1f88205c5fdf50895b813 = L.tileLayer(
+            var tile_layer_ba2abb0a50e9c82f25031777cd832ee4 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -80,349 +89,349 @@
             );
         
     
-            tile_layer_d2d2c2da36a1f88205c5fdf50895b813.addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            tile_layer_ba2abb0a50e9c82f25031777cd832ee4.addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-            var circle_marker_7c7e5a5fc178025abb819a35a8bd6a57 = L.circleMarker(
+            var circle_marker_52a34fde398ff2d666b60b88ccba3e9a = L.circleMarker(
                 [37.9555827, 23.703853],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_0c74e9bfc5c0af52a1585039397007c0 = L.popup({
+        var popup_e318a63ca4340ca5f522abe28a46c392 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d713856ce854c0974ef747257b1674a7 = $(`<div id="html_d713856ce854c0974ef747257b1674a7" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 15:17:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps0'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_0c74e9bfc5c0af52a1585039397007c0.setContent(html_d713856ce854c0974ef747257b1674a7);
+                var html_c43d162d2f775284bb141ba3b38d51ee = $(`<div id="html_c43d162d2f775284bb141ba3b38d51ee" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH14<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 15:17:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps0'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_e318a63ca4340ca5f522abe28a46c392.setContent(html_c43d162d2f775284bb141ba3b38d51ee);
             
         
 
-        circle_marker_7c7e5a5fc178025abb819a35a8bd6a57.bindPopup(popup_0c74e9bfc5c0af52a1585039397007c0)
+        circle_marker_52a34fde398ff2d666b60b88ccba3e9a.bindPopup(popup_e318a63ca4340ca5f522abe28a46c392)
         ;
 
         
     
     
-            var circle_marker_85ca1705b77c21ccb9ddeaad34ea1542 = L.circleMarker(
+            var circle_marker_eda797010ab2dbd5d0e91e487f40eb83 = L.circleMarker(
                 [38.041248, 23.7035854],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_3e3322317900a8f9e6e7f167441fc879 = L.popup({
+        var popup_bfd5be32342e1d7fe80cdee8117bcb8b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_618b072368eabef99bd33f569aef53f6 = $(`<div id="html_618b072368eabef99bd33f569aef53f6" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH22<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 17:44:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps1'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_3e3322317900a8f9e6e7f167441fc879.setContent(html_618b072368eabef99bd33f569aef53f6);
+                var html_8f98864b87309edfbda15b4a88cd1153 = $(`<div id="html_8f98864b87309edfbda15b4a88cd1153" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH22<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 17:44:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps1'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_bfd5be32342e1d7fe80cdee8117bcb8b.setContent(html_8f98864b87309edfbda15b4a88cd1153);
             
         
 
-        circle_marker_85ca1705b77c21ccb9ddeaad34ea1542.bindPopup(popup_3e3322317900a8f9e6e7f167441fc879)
+        circle_marker_eda797010ab2dbd5d0e91e487f40eb83.bindPopup(popup_bfd5be32342e1d7fe80cdee8117bcb8b)
         ;
 
         
     
     
-            var circle_marker_458907bb3ce0c34b644c92ac2434280f = L.circleMarker(
+            var circle_marker_c25549fb0b88a31cbf9406d9518ae1dd = L.circleMarker(
                 [38.0617656, 23.775998],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_505ab6ec8af76f8cdd83ae852d9ae624 = L.popup({
+        var popup_64315bcdf5c0096a595080dbdfc91dcc = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_2203e2cfc47cf537604e289ed6da605a = $(`<div id="html_2203e2cfc47cf537604e289ed6da605a" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH30<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 12:19:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps2'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
-                popup_505ab6ec8af76f8cdd83ae852d9ae624.setContent(html_2203e2cfc47cf537604e289ed6da605a);
+                var html_402d36ec3423e2b3fa22224bdee259a3 = $(`<div id="html_402d36ec3423e2b3fa22224bdee259a3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH30<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 12:19:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps2'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
+                popup_64315bcdf5c0096a595080dbdfc91dcc.setContent(html_402d36ec3423e2b3fa22224bdee259a3);
             
         
 
-        circle_marker_458907bb3ce0c34b644c92ac2434280f.bindPopup(popup_505ab6ec8af76f8cdd83ae852d9ae624)
+        circle_marker_c25549fb0b88a31cbf9406d9518ae1dd.bindPopup(popup_64315bcdf5c0096a595080dbdfc91dcc)
         ;
 
         
     
     
-            var circle_marker_16bb13b15737921524e843d70b58b6ca = L.circleMarker(
+            var circle_marker_9b06801a0b6ffa15ba9371329876148e = L.circleMarker(
                 [38.1049669, 23.7670892],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_08068fc5df76a63a749bf63a362971da = L.popup({
+        var popup_f0b084d65d7175cc81268a1c22f7aa4e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_f18fdf8292067fa81140f110074c365f = $(`<div id="html_f18fdf8292067fa81140f110074c365f" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH35<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 18:32:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps4'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_08068fc5df76a63a749bf63a362971da.setContent(html_f18fdf8292067fa81140f110074c365f);
+                var html_1318ff09f53bb48e8a19542b004e5784 = $(`<div id="html_1318ff09f53bb48e8a19542b004e5784" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH35<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 18:32:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps4'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_f0b084d65d7175cc81268a1c22f7aa4e.setContent(html_1318ff09f53bb48e8a19542b004e5784);
             
         
 
-        circle_marker_16bb13b15737921524e843d70b58b6ca.bindPopup(popup_08068fc5df76a63a749bf63a362971da)
+        circle_marker_9b06801a0b6ffa15ba9371329876148e.bindPopup(popup_f0b084d65d7175cc81268a1c22f7aa4e)
         ;
 
         
     
     
-            var circle_marker_0b075af93c66e1b589e30587fed406f8 = L.circleMarker(
+            var circle_marker_03d180373507eb0e69a2fca8af762047 = L.circleMarker(
                 [38.0122604, 23.8033644],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_7e2ca65ce3cf9e91830221124a051fa7 = L.popup({
+        var popup_0576036e7682bb7c5556c0dedec377e0 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_8c3393bb019246aabc1957e702b1d84f = $(`<div id="html_8c3393bb019246aabc1957e702b1d84f" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 11:22:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
-                popup_7e2ca65ce3cf9e91830221124a051fa7.setContent(html_8c3393bb019246aabc1957e702b1d84f);
+                var html_38096f28059f50ff1e94f6d34d4c84e0 = $(`<div id="html_38096f28059f50ff1e94f6d34d4c84e0" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 11:22:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
+                popup_0576036e7682bb7c5556c0dedec377e0.setContent(html_38096f28059f50ff1e94f6d34d4c84e0);
             
         
 
-        circle_marker_0b075af93c66e1b589e30587fed406f8.bindPopup(popup_7e2ca65ce3cf9e91830221124a051fa7)
+        circle_marker_03d180373507eb0e69a2fca8af762047.bindPopup(popup_0576036e7682bb7c5556c0dedec377e0)
         ;
 
         
     
     
-            var circle_marker_e38f5b1c8dfdb56274e65e886a3230be = L.circleMarker(
+            var circle_marker_611cbd1949830e7d7573602ae7625512 = L.circleMarker(
                 [37.9928314, 23.7065691],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_5b3607f437dc1894478ef47508658f6b = L.popup({
+        var popup_c1d81024fee85e0153c634d5a38c564e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0b1d03d925c2b42315c605e069f5017e = $(`<div id="html_0b1d03d925c2b42315c605e069f5017e" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH7<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 13:55:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps6'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_5b3607f437dc1894478ef47508658f6b.setContent(html_0b1d03d925c2b42315c605e069f5017e);
+                var html_b49ad81cde5fb95bc583a6cf5e421146 = $(`<div id="html_b49ad81cde5fb95bc583a6cf5e421146" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH7<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 13:55:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps6'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_c1d81024fee85e0153c634d5a38c564e.setContent(html_b49ad81cde5fb95bc583a6cf5e421146);
             
         
 
-        circle_marker_e38f5b1c8dfdb56274e65e886a3230be.bindPopup(popup_5b3607f437dc1894478ef47508658f6b)
+        circle_marker_611cbd1949830e7d7573602ae7625512.bindPopup(popup_c1d81024fee85e0153c634d5a38c564e)
         ;
 
         
     
     
-            var circle_marker_ee6885473dae6515083b458e50c83c62 = L.circleMarker(
+            var circle_marker_5a8ab68efa003d1abce83a46a58b95ca = L.circleMarker(
                 [38.0744188, 23.7582651],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_ade221b015d76a28eff9cf033bcbc6a9 = L.popup({
+        var popup_5518dd5090658f5355f3f0bfd5c8b27b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_9dc9039d94a420542c39ad09db3004f8 = $(`<div id="html_9dc9039d94a420542c39ad09db3004f8" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Agfan<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 13:10:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps7'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
-                popup_ade221b015d76a28eff9cf033bcbc6a9.setContent(html_9dc9039d94a420542c39ad09db3004f8);
+                var html_416b6bd44b111083fdb7b2435bf4326c = $(`<div id="html_416b6bd44b111083fdb7b2435bf4326c" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Agfan<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 13:10:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps7'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
+                popup_5518dd5090658f5355f3f0bfd5c8b27b.setContent(html_416b6bd44b111083fdb7b2435bf4326c);
             
         
 
-        circle_marker_ee6885473dae6515083b458e50c83c62.bindPopup(popup_ade221b015d76a28eff9cf033bcbc6a9)
+        circle_marker_5a8ab68efa003d1abce83a46a58b95ca.bindPopup(popup_5518dd5090658f5355f3f0bfd5c8b27b)
         ;
 
         
     
     
-            var circle_marker_f3bdff190e5463589f0f39c6fd864a81 = L.circleMarker(
+            var circle_marker_590763c0b37aff3e0aa1093fe6707039 = L.circleMarker(
                 [37.9841185, 23.6666081],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_d4f6c267ce92a0e62101bd9801b06b2b = L.popup({
+        var popup_e375f30195dd034ac8035452b4454008 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_80c1ab2fb4601125938cb4fed1f72879 = $(`<div id="html_80c1ab2fb4601125938cb4fed1f72879" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Aigalew<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 10:10:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps8'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
-                popup_d4f6c267ce92a0e62101bd9801b06b2b.setContent(html_80c1ab2fb4601125938cb4fed1f72879);
+                var html_55c7d5b49ae280e56c98b6c1d0366b75 = $(`<div id="html_55c7d5b49ae280e56c98b6c1d0366b75" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Aigalew<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 10:10:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps8'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
+                popup_e375f30195dd034ac8035452b4454008.setContent(html_55c7d5b49ae280e56c98b6c1d0366b75);
             
         
 
-        circle_marker_f3bdff190e5463589f0f39c6fd864a81.bindPopup(popup_d4f6c267ce92a0e62101bd9801b06b2b)
+        circle_marker_590763c0b37aff3e0aa1093fe6707039.bindPopup(popup_e375f30195dd034ac8035452b4454008)
         ;
 
         
     
     
-            var circle_marker_d6a3c2f48415007338cddb2b32376a92 = L.circleMarker(
+            var circle_marker_b5cce67069b7bb369f4545ac4469594f = L.circleMarker(
                 [38.0921499, 23.7702818],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_1a899b56bcc418c02d737488e8f968ae = L.popup({
+        var popup_bba77e9529e8a62eacf9d96f71b563ca = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_71378de849cdc1fe6a2fc4be6821ceec = $(`<div id="html_71378de849cdc1fe6a2fc4be6821ceec" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 18:51:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps11'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_1a899b56bcc418c02d737488e8f968ae.setContent(html_71378de849cdc1fe6a2fc4be6821ceec);
+                var html_2b63e20ac9fb1ca2a0d74042b2107066 = $(`<div id="html_2b63e20ac9fb1ca2a0d74042b2107066" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Dekeleias<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 18:51:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps11'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_bba77e9529e8a62eacf9d96f71b563ca.setContent(html_2b63e20ac9fb1ca2a0d74042b2107066);
             
         
 
-        circle_marker_d6a3c2f48415007338cddb2b32376a92.bindPopup(popup_1a899b56bcc418c02d737488e8f968ae)
+        circle_marker_b5cce67069b7bb369f4545ac4469594f.bindPopup(popup_bba77e9529e8a62eacf9d96f71b563ca)
         ;
 
         
     
     
-            var circle_marker_9d42349d1edab653b024136f7e937c07 = L.circleMarker(
+            var circle_marker_133b9625ffc16059da2a9e2d75a5de70 = L.circleMarker(
                 [38.0204606, 23.7361452],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_2d49bea2ec68baf78996cc34b816fea9 = L.popup({
+        var popup_17eb0f48c78a5a4b0de1767a437211bd = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_7a48fbd1d3695e0be3e895a70665cfe3 = $(`<div id="html_7a48fbd1d3695e0be3e895a70665cfe3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Drak<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 16:42:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps12'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_2d49bea2ec68baf78996cc34b816fea9.setContent(html_7a48fbd1d3695e0be3e895a70665cfe3);
+                var html_31f36818f60d34f7d3407992e3ce9be2 = $(`<div id="html_31f36818f60d34f7d3407992e3ce9be2" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Drak<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 16:42:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps12'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_17eb0f48c78a5a4b0de1767a437211bd.setContent(html_31f36818f60d34f7d3407992e3ce9be2);
             
         
 
-        circle_marker_9d42349d1edab653b024136f7e937c07.bindPopup(popup_2d49bea2ec68baf78996cc34b816fea9)
+        circle_marker_133b9625ffc16059da2a9e2d75a5de70.bindPopup(popup_17eb0f48c78a5a4b0de1767a437211bd)
         ;
 
         
     
     
-            var circle_marker_4fbbcb8c9d927337f18cf802d2e2f7c8 = L.circleMarker(
+            var circle_marker_cfd7b89793869636c4d15379c8e2b534 = L.circleMarker(
                 [38.0499929, 23.7371404],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_1d43cceb677770c80aa13b7f9f9c4e3a = L.popup({
+        var popup_4f17cd29c6fdd67abf5abcd8c77a6aae = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_2186e118d140edde9f3a7a6125b6c1c3 = $(`<div id="html_2186e118d140edde9f3a7a6125b6c1c3" style="width: 100.0%; height: 100.0%;"><b>ID:</b> KM<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 13:33:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps14'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
-                popup_1d43cceb677770c80aa13b7f9f9c4e3a.setContent(html_2186e118d140edde9f3a7a6125b6c1c3);
+                var html_afe46838dc58d72265f528161dcec1b0 = $(`<div id="html_afe46838dc58d72265f528161dcec1b0" style="width: 100.0%; height: 100.0%;"><b>ID:</b> KM<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 13:33:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps14'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
+                popup_4f17cd29c6fdd67abf5abcd8c77a6aae.setContent(html_afe46838dc58d72265f528161dcec1b0);
             
         
 
-        circle_marker_4fbbcb8c9d927337f18cf802d2e2f7c8.bindPopup(popup_1d43cceb677770c80aa13b7f9f9c4e3a)
+        circle_marker_cfd7b89793869636c4d15379c8e2b534.bindPopup(popup_4f17cd29c6fdd67abf5abcd8c77a6aae)
         ;
 
         
     
     
-            var circle_marker_379ab453c5a58d2a542b56d52c796299 = L.circleMarker(
+            var circle_marker_2c1684c0d013a83f8658148c0e9b84f6 = L.circleMarker(
                 [37.939104, 23.670382],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_46ba4e8768eee2eb81f78249dca31598 = L.popup({
+        var popup_ba0c7886ea77beb3306145d27470e845 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_77454c3ca0130e47b7cd0dce9a3e884b = $(`<div id="html_77454c3ca0130e47b7cd0dce9a3e884b" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Marina<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 15:54:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_46ba4e8768eee2eb81f78249dca31598.setContent(html_77454c3ca0130e47b7cd0dce9a3e884b);
+                var html_b73bb179a094d71c71717494b41b3f80 = $(`<div id="html_b73bb179a094d71c71717494b41b3f80" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Marina<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 15:54:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_ba0c7886ea77beb3306145d27470e845.setContent(html_b73bb179a094d71c71717494b41b3f80);
             
         
 
-        circle_marker_379ab453c5a58d2a542b56d52c796299.bindPopup(popup_46ba4e8768eee2eb81f78249dca31598)
+        circle_marker_2c1684c0d013a83f8658148c0e9b84f6.bindPopup(popup_ba0c7886ea77beb3306145d27470e845)
         ;
 
         
     
     
-            var circle_marker_4c250cfe22750887c3081da1cde35611 = L.circleMarker(
+            var circle_marker_e22141f6162b41fb6bb61686dc699c6f = L.circleMarker(
                 [38.0780089, 23.7708316],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_b50b74aac6d3d80bcb8af6bf39aebd34 = L.popup({
+        var popup_72dd9bcb5a984bacf86ba7a0823d0fe6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_3a3ce0c859b99e25c75b2cb3aedcdb1a = $(`<div id="html_3a3ce0c859b99e25c75b2cb3aedcdb1a" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Pyrna<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 12:53:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps16'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
-                popup_b50b74aac6d3d80bcb8af6bf39aebd34.setContent(html_3a3ce0c859b99e25c75b2cb3aedcdb1a);
+                var html_7af33b2463799337d0f4c1f2a6306ab2 = $(`<div id="html_7af33b2463799337d0f4c1f2a6306ab2" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Pyrna<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-09 12:53:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps16'>14.0</span> days<br><b>CPS End Date:</b> 2025-05-24<br></div>`)[0];
+                popup_72dd9bcb5a984bacf86ba7a0823d0fe6.setContent(html_7af33b2463799337d0f4c1f2a6306ab2);
             
         
 
-        circle_marker_4c250cfe22750887c3081da1cde35611.bindPopup(popup_b50b74aac6d3d80bcb8af6bf39aebd34)
+        circle_marker_e22141f6162b41fb6bb61686dc699c6f.bindPopup(popup_72dd9bcb5a984bacf86ba7a0823d0fe6)
         ;
 
         
     
     
-            var circle_marker_b4e8d673faae395ff54679c66463ba1d = L.circleMarker(
+            var circle_marker_947ba26c42427d81cab66f9d9ba8ccc3 = L.circleMarker(
                 [37.9730254, 23.6815746],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_ec3c6e05bb1088af56e413dce7b8ed62 = L.popup({
+        var popup_851f0a1a709165695994de291108aba6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0fe845c0c66fdea653b770a1e9e54637 = $(`<div id="html_0fe845c0c66fdea653b770a1e9e54637" style="width: 100.0%; height: 100.0%;"><b>ID:</b> REN<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 14:27:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps17'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_ec3c6e05bb1088af56e413dce7b8ed62.setContent(html_0fe845c0c66fdea653b770a1e9e54637);
+                var html_3f47d72151fa24f9065a6d519fabea50 = $(`<div id="html_3f47d72151fa24f9065a6d519fabea50" style="width: 100.0%; height: 100.0%;"><b>ID:</b> REN<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 14:27:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps17'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_851f0a1a709165695994de291108aba6.setContent(html_3f47d72151fa24f9065a6d519fabea50);
             
         
 
-        circle_marker_b4e8d673faae395ff54679c66463ba1d.bindPopup(popup_ec3c6e05bb1088af56e413dce7b8ed62)
+        circle_marker_947ba26c42427d81cab66f9d9ba8ccc3.bindPopup(popup_851f0a1a709165695994de291108aba6)
         ;
 
         
     
     
-            var circle_marker_26eb8806f7243317b6888e0f22315955 = L.circleMarker(
+            var circle_marker_4313f8d6b3e4aae1dc91c318a809dec5 = L.circleMarker(
                 [37.9750865, 23.7472135],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_c18040e422ee8a01c32eefb86bb04fe5);
+            ).addTo(map_83f3ecc8c0facc6719918a5ffa14b9cd);
         
     
-        var popup_eed963924e1a6a4ebd371a78dc51729d = L.popup({
+        var popup_5b8ac0597e3f46398e51acecf0031c20 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_432f47c307647af544a51c42113b871d = $(`<div id="html_432f47c307647af544a51c42113b871d" style="width: 100.0%; height: 100.0%;"><b>ID:</b> RIZ<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 12:57:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps18'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
-                popup_eed963924e1a6a4ebd371a78dc51729d.setContent(html_432f47c307647af544a51c42113b871d);
+                var html_c9532d846f2d215898b78094de9d1734 = $(`<div id="html_c9532d846f2d215898b78094de9d1734" style="width: 100.0%; height: 100.0%;"><b>ID:</b> RIZ<br><b>Type:</b> cps_and_dgts<br><b>Installation Date:</b> 2025-05-08 12:57:00+03:00<br><b>CPS Days Remaining:</b> <span id='timer_cps18'>13.0</span> days<br><b>CPS End Date:</b> 2025-05-23<br></div>`)[0];
+                popup_5b8ac0597e3f46398e51acecf0031c20.setContent(html_c9532d846f2d215898b78094de9d1734);
             
         
 
-        circle_marker_26eb8806f7243317b6888e0f22315955.bindPopup(popup_eed963924e1a6a4ebd371a78dc51729d)
+        circle_marker_4313f8d6b3e4aae1dc91c318a809dec5.bindPopup(popup_5b8ac0597e3f46398e51acecf0031c20)
         ;
 
         
