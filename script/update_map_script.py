@@ -17,7 +17,31 @@ asset=kobo.list_assets()
 pas=kobo.get_asset(form_id)
 #Get the data from the form
 data=kobo.get_data(form_id)
-api_df=pd.json_normalize(data['results'])
+records = []
+if isinstance(data, dict) and "results" in data:
+    records.extend(data["results"])
+    next_url = data.get("next")
+
+    headers = {"Authorization": f"Token {token}"}
+
+    while next_url:
+        response = requests.get(next_url, headers=headers, timeout=60)
+        response.raise_for_status()
+        page = response.json()
+
+        if "results" not in page:
+            raise ValueError(f"Unexpected response: {page}")
+
+        records.extend(page["results"])
+        next_url = page.get("next")
+
+elif isinstance(data, list):
+    records = data
+
+else:
+    raise ValueError(f"Unexpected response: {data}")
+
+api_df = pd.json_normalize(records)
 api_df=api_df[["ID",
     "Partner_Abbreviation",
     "Water_Resource",
