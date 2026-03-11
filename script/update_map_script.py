@@ -1,5 +1,6 @@
 import pandas as pd
 import folium 
+import requests
 from datetime import timedelta
 from koboextractor import KoboExtractor
 
