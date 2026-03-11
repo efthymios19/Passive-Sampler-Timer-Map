@@ -7,7 +7,8 @@ from koboextractor import KoboExtractor
 #Import kobo from API
 token= "c5d9b5fb881c7f4799e126990107af5cbd45a8d1"
 form_id= 'a9WRp8ft8hBPCQesFGbZ5x'
-kobo_base_url= "https://kobo.humanitarianresponse.info/api/v2"
+#kobo_base_url= "https://kobo.humanitarianresponse.info/api/v2" maybe deprecated (see here: https://community.kobotoolbox.org/t/new-problem-in-api-v2/45655/5)
+kobo_base_url="https://kc-eu.kobotoolbox.org/api/v2"
 #Access account with API
 kobo=KoboExtractor(token,kobo_base_url)
 #Get information for all the forms
