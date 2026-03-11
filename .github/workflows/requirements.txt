@@ -1,3 +1,0 @@
-pandas == 2.1.4
-folium == 0.14.0
-koboextractor == 0.2.1
