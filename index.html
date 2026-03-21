@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_1516889dd7229009c4d78800d7aa79e0 {
+                #map_e3c5f644abd2d82259d72f3922db957a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -48,16 +48,16 @@
      <i class="fa fa-circle" style="color:red"></i> Ready to Collect
 </div>
     
-            <div class="folium-map" id="map_1516889dd7229009c4d78800d7aa79e0" ></div>
+            <div class="folium-map" id="map_e3c5f644abd2d82259d72f3922db957a" ></div>
         
 </body>
 <script>
     
     
-            var map_1516889dd7229009c4d78800d7aa79e0 = L.map(
-                "map_1516889dd7229009c4d78800d7aa79e0",
+            var map_e3c5f644abd2d82259d72f3922db957a = L.map(
+                "map_e3c5f644abd2d82259d72f3922db957a",
                 {
-                    center: [38.16454219090909, 22.712660113636364],
+                    center: [38.16077491818182, 22.7101227],
                     crs: L.CRS.EPSG3857,
                     zoom: 10,
                     zoomControl: true,
@@ -69,70 +69,91 @@
 
         
     
-            var tile_layer_f06ca3afe20fc0f1a2c06ea360f5c213 = L.tileLayer(
+            var tile_layer_a710a5186518fd32210dc7a8b5b94d3f = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_1516889dd7229009c4d78800d7aa79e0);
+            ).addTo(map_e3c5f644abd2d82259d72f3922db957a);
         
     
-            var circle_marker_41c83f20877e0b5d3163882c58af4342 = L.circleMarker(
+            var circle_marker_2eafd02183cf7abdb0b2b7a600628887 = L.circleMarker(
+                [37.9293653, 23.7475388],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e3c5f644abd2d82259d72f3922db957a);
+        
+    
+        var popup_5bf01bb3520664da16ef09fc90ce0e38 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b798c383b102885ddd4c11dbab43900c = $(`<div id="html_b798c383b102885ddd4c11dbab43900c" style="width: 100.0%; height: 100.0%;"><b>ID:</b> ATH36<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2026-03-21 11:45:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps5'>11.0</span> days<br><b>VPS End Date:</b> 2026-04-02<br><b>CPS Days Remaining:</b> <span id='timer_cps5'>14.0</span> days<br><b>CPS End Date:</b> 2026-04-05<br></div>`)[0];
+                popup_5bf01bb3520664da16ef09fc90ce0e38.setContent(html_b798c383b102885ddd4c11dbab43900c);
+            
+        
+
+        circle_marker_2eafd02183cf7abdb0b2b7a600628887.bindPopup(popup_5bf01bb3520664da16ef09fc90ce0e38)
+        ;
+
+        
+    
+    
+            var circle_marker_298ad533e17b301472c48c1fb483e686 = L.circleMarker(
                 [38.0033899, 22.7636874],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1516889dd7229009c4d78800d7aa79e0);
+            ).addTo(map_e3c5f644abd2d82259d72f3922db957a);
         
     
-        var popup_26eb451f732fbe901b53d6e6cd18d835 = L.popup({"maxWidth": 300});
+        var popup_3acdf7c54d0ce656a80a07d5adcbe8ff = L.popup({"maxWidth": 300});
 
         
             
-                var html_27356cd8ae00ad7f9fd87670da2a92db = $(`<div id="html_27356cd8ae00ad7f9fd87670da2a92db" style="width: 100.0%; height: 100.0%;"><b>ID:</b> F<br><b>Type:</b> cps<br><b>Installation Date:</b> 2025-12-06 13:03:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps13'>0.0</span> days<br><b>CPS End Date:</b> 2025-12-21<br></div>`)[0];
-                popup_26eb451f732fbe901b53d6e6cd18d835.setContent(html_27356cd8ae00ad7f9fd87670da2a92db);
+                var html_efd07aa179f8bc30f4005ea880488e0f = $(`<div id="html_efd07aa179f8bc30f4005ea880488e0f" style="width: 100.0%; height: 100.0%;"><b>ID:</b> F<br><b>Type:</b> cps<br><b>Installation Date:</b> 2025-12-06 13:03:00+02:00<br><b>CPS Days Remaining:</b> <span id='timer_cps13'>0.0</span> days<br><b>CPS End Date:</b> 2025-12-21<br></div>`)[0];
+                popup_3acdf7c54d0ce656a80a07d5adcbe8ff.setContent(html_efd07aa179f8bc30f4005ea880488e0f);
             
         
 
-        circle_marker_41c83f20877e0b5d3163882c58af4342.bindPopup(popup_26eb451f732fbe901b53d6e6cd18d835)
+        circle_marker_298ad533e17b301472c48c1fb483e686.bindPopup(popup_3acdf7c54d0ce656a80a07d5adcbe8ff)
         ;
 
         
     
     
-            var circle_marker_86020979011c784dacd2d6a1408fe305 = L.circleMarker(
+            var circle_marker_096fbbca3f4a1aa32ed74a0c15e23957 = L.circleMarker(
                 [41.3872607, 2.1155229],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1516889dd7229009c4d78800d7aa79e0);
+            ).addTo(map_e3c5f644abd2d82259d72f3922db957a);
         
     
-        var popup_b89cb90e36f9941a4f17453811f30aa1 = L.popup({"maxWidth": 300});
+        var popup_70b86cead1ef19db9267f99fa8df711a = L.popup({"maxWidth": 300});
 
         
             
-                var html_e8ec38b8a79fe736a5cb4170679d4b10 = $(`<div id="html_e8ec38b8a79fe736a5cb4170679d4b10" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Id<br><b>Type:</b> cps<br><b>Installation Date:</b> 2025-11-24 18:09:00+01:00<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>0.0</span> days<br><b>CPS End Date:</b> 2025-12-09<br></div>`)[0];
-                popup_b89cb90e36f9941a4f17453811f30aa1.setContent(html_e8ec38b8a79fe736a5cb4170679d4b10);
+                var html_6cb3e98482f213008351721d4b6d7db9 = $(`<div id="html_6cb3e98482f213008351721d4b6d7db9" style="width: 100.0%; height: 100.0%;"><b>ID:</b> Id<br><b>Type:</b> cps<br><b>Installation Date:</b> 2025-11-24 18:09:00+01:00<br><b>CPS Days Remaining:</b> <span id='timer_cps15'>0.0</span> days<br><b>CPS End Date:</b> 2025-12-09<br></div>`)[0];
+                popup_70b86cead1ef19db9267f99fa8df711a.setContent(html_6cb3e98482f213008351721d4b6d7db9);
             
         
 
-        circle_marker_86020979011c784dacd2d6a1408fe305.bindPopup(popup_b89cb90e36f9941a4f17453811f30aa1)
+        circle_marker_096fbbca3f4a1aa32ed74a0c15e23957.bindPopup(popup_70b86cead1ef19db9267f99fa8df711a)
         ;
 
         
     
     
-            var circle_marker_eb47707431c643d65f751c1a9c237357 = L.circleMarker(
+            var circle_marker_3f29b42bdb659cb13af5d1d083813595 = L.circleMarker(
                 [37.9753061, 23.7838832],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_1516889dd7229009c4d78800d7aa79e0);
+            ).addTo(map_e3c5f644abd2d82259d72f3922db957a);
         
     
-        var popup_05f83a151378b978d3facff9d67d891e = L.popup({"maxWidth": 300});
+        var popup_79e69d0685760b8ec31c1879aefa43cf = L.popup({"maxWidth": 300});
 
         
             
-                var html_5df8c3ac1a44c37208da59991cba0bc1 = $(`<div id="html_5df8c3ac1a44c37208da59991cba0bc1" style="width: 100.0%; height: 100.0%;"><b>ID:</b> NTUA<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2025-11-19 15:40:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps18'>0.0</span> days<br><b>VPS End Date:</b> 2025-12-01<br><b>CPS Days Remaining:</b> <span id='timer_cps18'>0.0</span> days<br><b>CPS End Date:</b> 2025-12-04<br></div>`)[0];
-                popup_05f83a151378b978d3facff9d67d891e.setContent(html_5df8c3ac1a44c37208da59991cba0bc1);
+                var html_adf7fb86e1b338238226501adb54a681 = $(`<div id="html_adf7fb86e1b338238226501adb54a681" style="width: 100.0%; height: 100.0%;"><b>ID:</b> NTUA<br><b>Type:</b> all_of_them<br><b>Installation Date:</b> 2025-11-19 15:40:00+02:00<br><b>VPS Days Remaining:</b> <span id='timer_vps18'>0.0</span> days<br><b>VPS End Date:</b> 2025-12-01<br><b>CPS Days Remaining:</b> <span id='timer_cps18'>0.0</span> days<br><b>CPS End Date:</b> 2025-12-04<br></div>`)[0];
+                popup_79e69d0685760b8ec31c1879aefa43cf.setContent(html_adf7fb86e1b338238226501adb54a681);
             
         
 
-        circle_marker_eb47707431c643d65f751c1a9c237357.bindPopup(popup_05f83a151378b978d3facff9d67d891e)
+        circle_marker_3f29b42bdb659cb13af5d1d083813595.bindPopup(popup_79e69d0685760b8ec31c1879aefa43cf)
         ;
 
         
